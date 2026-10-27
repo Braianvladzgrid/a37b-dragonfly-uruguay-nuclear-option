@@ -85,7 +85,7 @@ public sealed class A37TestProbe:BaseUnityPlugin {
   var cam=FindObjectOfType<CameraStateManager>();Log("CAMERA "+(cam?cam.currentState.GetType().Name:"none")+" pan="+(cam?Field(cam.currentState,"panView"):null)+" tilt="+(cam?Field(cam.currentState,"tiltView"):null));
   Log("speed="+rb.velocity.magnitude+" altitude="+a.GlobalPosition().y+" mass="+a.GetMass()+" CG="+a.transform.InverseTransformPoint(a.GetCenterOfMass())+" controls="+input.throttle+","+input.pitch+","+input.roll+","+input.yaw+","+input.brake+" rotation="+a.transform.eulerAngles+" health="+string.Join(",",a.partLookup.Select(p=>p.name+":"+p.hitPoints).ToArray()));
   foreach(var g in FindObjectsOfType<LandingGear>().Where(g=>(Aircraft)Field(g,"aircraft")==a))Log("GEAR "+g.name+" fold="+Field(g,"foldAmount")+" compression="+Field(g,"compressionDistance")+" contact="+g.WeightOnWheel(.1f)+" bump="+a.transform.InverseTransformPoint(((GameObject)Field(g,"bumpStop")).transform.position));
-  foreach(var b in FindObjectsOfType<Airbrake>().Where(b=>(Aircraft)Field(b,"aircraft")==a)){var controls=Field(b,"controlInputs") as ControlInputs;Log("AIRBRAKE "+b.name+" open="+Field(b,"openAmount")+" cachedThrottle="+(controls==null?-1:controls.throttle));}
+  foreach(var b in FindObjectsOfType<Airbrake>().Where(b=>(Aircraft)Field(b,"aircraft")==a)){var controls=Field(b,"controlInputs") as ControlInputs;Log("AIRBRAKE "+b.name+" open="+Field(b,"openAmount")+" enabled="+b.enabled+" openSpeed="+Field(b,"openSpeed")+" cachedThrottle="+(controls==null?-1:controls.throttle));}
   foreach(var e in FindObjectsOfType<Turbojet>().Where(e=>(Aircraft)Field(e,"aircraft")==a)){
    Log("ENGINE "+e.name+" max="+Field(e,"maxThrust")+" current="+Field(e,"thrust")+" afterburnerOn="+Field(e,"afterburnerOn"));
    foreach(var nozzle in (Array)Field(e,"nozzles"))foreach(var burner in (Array)Field(nozzle,"afterburners")){
@@ -116,7 +116,9 @@ public sealed class A37TestProbe:BaseUnityPlugin {
  [HarmonyPatch(typeof(Aircraft),"GetInputs"),HarmonyPostfix,HarmonyPriority(Priority.Last)]
  static void Inputs(Aircraft __instance,ControlInputs __result){if(driving&&__instance==target&&__result!=null){__result.throttle=throttle;__result.pitch=pitch;__result.roll=roll;__result.yaw=yaw;__result.brake=brake;}}
  [HarmonyPatch(typeof(Aircraft),"FilterInputs"),HarmonyPostfix,HarmonyPriority(Priority.Last)]static void Filter(Aircraft __instance){Inputs(__instance,__instance.GetInputs());}
+ [HarmonyPatch(typeof(Airbrake),"Update"),HarmonyPrefix,HarmonyPriority(Priority.Last)]static void BrakeUpdate(Aircraft ___aircraft,ControlInputs ___controlInputs){Inputs(___aircraft,___controlInputs);}
  [HarmonyPatch(typeof(Turbojet),"FixedUpdate"),HarmonyPrefix,HarmonyPriority(Priority.Last)]static void Engine(Aircraft ___aircraft,ControlInputs ___controlInputs){Inputs(___aircraft,___controlInputs);}
  [HarmonyPatch(typeof(LandingGear),"FixedUpdate"),HarmonyPrefix,HarmonyPriority(Priority.Last)]static void Gear(Aircraft ___aircraft,ControlInputs ___controlInputs){Inputs(___aircraft,___controlInputs);}
 }
+
 

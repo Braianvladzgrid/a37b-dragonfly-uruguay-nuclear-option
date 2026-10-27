@@ -32,3 +32,18 @@ This new aerodynamic fit still needs fresh-spawn takeoff/landing validation.
 Build 16 compiles while 15 is tested: custom 7.62 mm minigun using native firing,
 rearming and muzzle effects, five loadout sets (gun plus four paired pylons).
 Not yet installed or tested; do not publish as playable yet.
+
+## Update 01:24 Uruguay
+Build 15 passed native takeoff at 04:06:40Z and full landing/stop at 04:07:54Z,
+all 37 parts at 100 percent. Later throttle-release rolling check ran beyond the
+runway and impacted terrain at 04:09:19Z; this is a separate test-fixture failure.
+Build 17 repeated takeoff at 04:21:58Z. Internal gun fired 77 rounds (1500 to1423)
+at 04:23:06-09Z after gear retraction, all airframe parts remained 100 percent.
+Gear-down native weapon safety correctly prevented firing before retraction.
+Airbrake remained open despite engine test inputs. FilterInputs postfix alone
+did not fix input ordering. Test-only Airbrake.Update prefix now synchronizes
+the same commanded inputs immediately before native airbrake evaluation.
+Build 18 removes the internal gun pod donor capsule; native nose hull remains.
+Bundle SHA256 F31319256A8D94D939A7D883A25EA46EC1653F954F3131EC11290AE77BCBC80D.
+Final performance and external weapon tests remain pending. No playable release
+or NOMM submission yet. Start Mirage 2000 only after A37 acceptance is complete.
