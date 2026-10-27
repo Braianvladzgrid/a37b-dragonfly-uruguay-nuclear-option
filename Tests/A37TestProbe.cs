@@ -45,12 +45,14 @@ public sealed class A37TestProbe:BaseUnityPlugin {
      var runway=(Airbase.Runway)usage.GetType().GetField("Runway").GetValue(usage);bool reverse=(bool)usage.GetType().GetField("Reverse").GetValue(usage);
      var near=reverse?runway.End:runway.Start;var far=reverse?runway.Start:runway.End;heading=Vector3.ProjectOnPlane(far.position-near.position,Vector3.up).normalized;
      runwayY=near.position.y;var origin=a.transform.position;var rotation=Quaternion.LookRotation(heading)*Quaternion.Inverse(a.transform.rotation);var destination=command=="approach"?near.position+heading*100+Vector3.up*25:near.position+heading*100+Vector3.up*1.6f;
-     var bodies=a.partLookup.OfType<AeroPart>().Select(p=>p.rb).Where(b=>b).Concat(new[]{a.CockpitRB()}).Distinct().ToArray();
+     // Suspension bodies are not AeroParts. Omitting them tears native joints on teleport.
+     var bodies=a.partLookup.OfType<AeroPart>().SelectMany(p=>p.GetComponentsInChildren<Rigidbody>(true)).Concat(a.GetComponentsInChildren<Rigidbody>(true)).Concat(a.partLookup.OfType<AeroPart>().Select(p=>p.rb)).Where(b=>b).Distinct().ToArray();
      var poses=bodies.Select(b=>new{body=b,position=destination+rotation*(b.position-origin),rotation=rotation*b.rotation}).ToArray();
+     a.transform.SetPositionAndRotation(destination,Quaternion.LookRotation(heading));
      foreach(var p in poses){p.body.position=p.position;p.body.rotation=p.rotation;p.body.velocity=command=="approach"?heading*95:Vector3.zero;p.body.angularVelocity=Vector3.zero;}
      Physics.SyncTransforms();a.SetGear(true);driving=true;takeoff=landing=false;throttle=pitch=roll=yaw=0;brake=1;until=Time.unscaledTime+180;
      if(command=="approach"){landing=true;touched=false;approachStarted=Time.unscaledTime;throttle=.25f;brake=0;until=Time.unscaledTime+120;}
-     Log("FIXTURE placed at runway; subsequent motion uses native forces. heading="+heading);
+     Log("FIXTURE placed at runway; subsequent motion uses native forces. bodies="+bodies.Length+" heading="+heading);
     } else if(command=="takeoff") {driving=takeoff=true;landing=false;cruise=false;startY=a.GlobalPosition().y;until=Time.unscaledTime+600;throttle=1;brake=0;}
     else if(command=="full_power"){fullPower=true;cruiseHeight=1500;Log("SPEED TEST full power; native forces and controlled altitude, no speed hold");}
     else if(command=="cruise"){fullPower=false;}
@@ -92,7 +94,7 @@ public sealed class A37TestProbe:BaseUnityPlugin {
   if(Time.unscaledTime>until){driving=takeoff=false;Log("TIMEOUT released all test inputs");return;}
   if(landing){var body=target.CockpitRB();var angularLocal=target.transform.InverseTransformDirection(body.angularVelocity);float height=target.GlobalPosition().y-runwayY;float desiredVertical=height>6?-3f:-1.2f;float noseUp=Mathf.Clamp(3+(desiredVertical-body.velocity.y)*2,-4,14);pitch=Mathf.Clamp(Mathf.DeltaAngle(target.transform.eulerAngles.x,-noseUp)*.12f-angularLocal.x*.3f,-.9f,.9f);roll=Mathf.Clamp(Mathf.DeltaAngle(0,target.transform.eulerAngles.z)*.04f+angularLocal.z*.2f,-.3f,.3f);yaw=Mathf.Clamp(Vector3.SignedAngle(Vector3.ProjectOnPlane(target.transform.forward,Vector3.up),heading,Vector3.up)/20,-.3f,.3f);throttle=Mathf.Clamp(.12f+(95-body.velocity.magnitude)*.015f,0,.6f);brake=0;if(Time.unscaledTime>approachStarted+2&&FindObjectsOfType<LandingGear>().Count(g=>(Aircraft)Field(g,"aircraft")==target&&g.WeightOnWheel(.01f))>=2)touched=true;if(touched){throttle=0;brake=1;pitch=roll=yaw=0;if(body.velocity.magnitude<2){Log("LANDING STOPPED health="+string.Join(",",target.partLookup.Select(p=>p.name+":"+p.hitPoints).ToArray()));landing=false;}}return;}
   if(!takeoff)return;
-  if(target.partLookup.Any(p=>p.hitPoints<=0)){Log("TAKEOFF FAIL: structural damage; stopping test");takeoff=false;throttle=pitch=roll=yaw=0;brake=1;return;}
+  if(target.partLookup.Any(p=>p.hitPoints<99.99f)){Log("TAKEOFF FAIL: structural damage; stopping test");takeoff=false;throttle=pitch=roll=yaw=0;brake=1;return;}
   var rb=target.CockpitRB();float speed=rb.velocity.magnitude;var angular=target.transform.InverseTransformDirection(rb.angularVelocity);
   float desiredPitch=speed>65?-10:0;
   // Reducing throttle must not simultaneously command a 1200 m descent.

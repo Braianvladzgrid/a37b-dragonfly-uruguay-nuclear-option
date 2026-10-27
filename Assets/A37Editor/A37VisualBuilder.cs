@@ -42,6 +42,7 @@ public static class A37VisualBuilder {
    for(int i=0;i<slots.Length;i++){
     var original=slots[i];if(!original)continue;
     bool glass=renderer.name.IndexOf("vitre",StringComparison.OrdinalIgnoreCase)>=0||renderer.name.IndexOf("verriere",StringComparison.OrdinalIgnoreCase)>=0||renderer.name=="lunettes";
+    if(original.HasProperty("_Color")&&original.GetColor("_Color").a<.95f)glass=true;
     if(renderer.name.IndexOf("tour",StringComparison.OrdinalIgnoreCase)>=0)glass=false;
     var key=original.name+(glass?"_glass":"");var path=R+"/Materials/"+key.Replace('/','_')+".mat";
     var mat=AssetDatabase.LoadAssetAtPath<Material>(path);if(!mat){mat=new Material(Shader.Find("Universal Render Pipeline/Lit"));AssetDatabase.CreateAsset(mat,path);}
@@ -73,6 +74,7 @@ public static class A37VisualBuilder {
    if(scale!=null)node.localScale=new Vector3(N(scale,"y-offset",1),N(scale,"z-offset",1),N(scale,"x-offset",1));
    if(child.Element("name")!=null)node.name=child.Element("name").Value;
   }
+  if(full.Replace('\\','/').Contains("/Interior/Panel/Instruments/"))A37GaugeBuilder.Apply(document,group);
   return group;
  }
  public static void BuildAndInspect(){

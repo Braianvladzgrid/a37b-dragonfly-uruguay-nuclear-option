@@ -32,7 +32,11 @@ public static class A37AircraftBuilder {
   var ds=new SerializedObject(definition);Text(ds,"jsonKey",Key);Text(ds,"unitName","A-37B Dragonfly Uruguay");Text(ds,"code","A-37B");Text(ds,"description","Uruguayan light attack jet. Tier 1, $13 million. Two dry J85 engines and eight underwing stations. Flight tuning is experimental.");
   Number(ds,"value",13);Number(ds,"mass",2817);Number(ds,"length",8.62f);Number(ds,"width",10.93f);Number(ds,"height",2.7f);Number(ds,"radarSize",.6f);ds.FindProperty("spawnOffset").vector3Value=new Vector3(0,1.42f,0);ds.FindProperty("aircraftParameters").objectReferenceValue=parameters;ds.ApplyModifiedPropertiesWithoutUndo();
   var info=ds.FindProperty("aircraftInfo");info.FindPropertyRelative("emptyWeight").floatValue=2817;info.FindPropertyRelative("maxWeight").floatValue=7000;info.FindPropertyRelative("maxSpeed").floatValue=770;info.FindPropertyRelative("stallSpeed").floatValue=182;ds.ApplyModifiedPropertiesWithoutUndo();
-  var ps=new SerializedObject(parameters);Text(ps,"aircraftName","A-37B Dragonfly Uruguay");ps.FindProperty("rankRequired").intValue=1;ps.FindProperty("liveries").arraySize=0;Number(ps,"maxSpeed",770f/3.6f);Number(ps,"takeoffSpeed",60);Number(ps,"approachSpeed",55);Number(ps,"landingSpeed",51);Number(ps,"shortLandingSpeed",51);Number(ps,"cornerSpeed",110);ps.ApplyModifiedPropertiesWithoutUndo();
+  var ps=new SerializedObject(parameters);Text(ps,"aircraftName","A-37B Dragonfly Uruguay");ps.FindProperty("rankRequired").intValue=1;ps.FindProperty("liveries").arraySize=0;
+  // Native trainer defaults contain five sets and a gun pod absent from this airframe.
+  var defaults=ps.FindProperty("loadouts");defaults.arraySize=2;
+  for(int faction=0;faction<2;faction++){var weapons=defaults.GetArrayElementAtIndex(faction).FindPropertyRelative("weapons");weapons.arraySize=4;for(int station=0;station<4;station++)weapons.GetArrayElementAtIndex(station).objectReferenceValue=null;}
+  ps.FindProperty("StandardLoadouts").arraySize=0;Number(ps,"maxSpeed",770f/3.6f);Number(ps,"takeoffSpeed",60);Number(ps,"approachSpeed",55);Number(ps,"landingSpeed",51);Number(ps,"shortLandingSpeed",51);Number(ps,"cornerSpeed",110);ps.ApplyModifiedPropertiesWithoutUndo();
   AssetDatabase.CreateAsset(definition,R+"/A37Definition.asset");AssetDatabase.CreateAsset(parameters,R+"/A37Parameters.asset");ConfigureLivery(parameters,nativeParams);
   var root=Object.Instantiate(nativeRoot);root.name=Key;
   try{
@@ -45,6 +49,7 @@ public static class A37AircraftBuilder {
    foreach(var mesh in root.GetComponentsInChildren<MeshFilter>(true))if(!displays.Contains(mesh.GetComponent<Renderer>()))mesh.sharedMesh=null;
    foreach(var mesh in root.GetComponentsInChildren<SkinnedMeshRenderer>(true))mesh.sharedMesh=null;
    var visual=Object.Instantiate(AssetDatabase.LoadAssetAtPath<GameObject>(R+"/A37Visual.prefab"),root.transform);visual.name="A37Exterior";visual.transform.localScale=ModelScale;
+   A37Markings.Apply(visual);
    foreach(var t in visual.GetComponentsInChildren<Transform>(true))t.gameObject.layer=root.layer;
    var body=T(visual,"a37"); // Root OBJ object, separate from XML assembly group.
    var bodyMeshes=body.GetComponentsInChildren<MeshFilter>(true).Where(m=>m.sharedMesh).ToArray();
@@ -70,6 +75,14 @@ public static class A37AircraftBuilder {
   var parts=All(root,"AeroPart").ToArray();float mass=parts.Sum(c=>new SerializedObject(c).FindProperty("mass").floatValue);
   float wing=parts.Where(c=>c.name.StartsWith("wing")||c.name.StartsWith("aileron")||c.name.StartsWith("flap")).Sum(c=>new SerializedObject(c).FindProperty("wingArea").floatValue);
   foreach(var part in parts){var so=new SerializedObject(part);Number(so,"mass",so.FindProperty("mass").floatValue*2817f/mass);if(part.name.StartsWith("wing")||part.name.StartsWith("aileron")||part.name.StartsWith("flap"))Number(so,"wingArea",so.FindProperty("wingArea").floatValue*17.09f/wing);else Number(so,"wingArea",so.FindProperty("wingArea").floatValue*.45f);so.ApplyModifiedPropertiesWithoutUndo();}
+  // The trainer's original mass distribution is aft of the A-37 main wheels.
+  // Reweight actual structural stations, preserving total empty mass and native
+  // body contacts/inertias. Target gives about 17% static nose-wheel loading.
+  var weights=parts.Select(p=>(double)new SerializedObject(p).FindProperty("mass").floatValue).ToArray();double lower=-2,upper=2;
+  for(int iteration=0;iteration<45;iteration++){double k=(lower+upper)/2,total=0,moment=0;for(int i=0;i<parts.Length;i++){double w=weights[i]*Math.Exp(k*parts[i].transform.position.z);total+=w;moment+=w*parts[i].transform.position.z;}if(moment/total<1.05)lower=k;else upper=k;}
+  double bias=(lower+upper)/2;double denominator=parts.Select((p,i)=>weights[i]*Math.Exp(bias*p.transform.position.z)).Sum();
+  for(int i=0;i<parts.Length;i++){var s=new SerializedObject(parts[i]);Number(s,"mass",(float)(2817*weights[i]*Math.Exp(bias*parts[i].transform.position.z)/denominator));if((parts[i].name.StartsWith("vstab")||parts[i].name=="rudder_R")&&parts[i].name.EndsWith("_R")){Number(s,"wingArea",0);Number(s,"dragArea",0);}s.ApplyModifiedPropertiesWithoutUndo();}
+  File.WriteAllText("../../work/a37/mass-stations.txt",string.Join("\n",parts.Select(p=>p.name+" mass="+new SerializedObject(p).FindProperty("mass").floatValue.ToString("F2",CultureInfo.InvariantCulture)+" position="+p.transform.position))+"\nEmpty target CG z=1.05m; total mass=2817kg. Engineering fit, not a measured real-aircraft datum.\n");
   var tanks=All(root,"FuelTank").ToArray();float totalFuel=tanks.Sum(t=>new SerializedObject(t).FindProperty("fuelCapacity").floatValue);
   foreach(var tank in tanks){var s=new SerializedObject(tank);var cap=s.FindProperty("fuelCapacity");cap.floatValue*=1536f/totalFuel;s.ApplyModifiedPropertiesWithoutUndo();}
   // Collider bounds come from the A-37 geometry; no donor wings or nose remain collidable.
@@ -94,8 +107,13 @@ public static class A37AircraftBuilder {
   var mesh=AssetDatabase.LoadAssetAtPath<Mesh>(path);if(!mesh){mesh=new Mesh();AssetDatabase.CreateAsset(mesh,path);}mesh.Clear();var c=world.center;var e=Vector3.Max(world.extents,Vector3.one*.025f);mesh.vertices=new[]{c+new Vector3(-e.x,-e.y,-e.z),c+new Vector3(e.x,-e.y,-e.z),c+new Vector3(e.x,e.y,-e.z),c+new Vector3(-e.x,e.y,-e.z),c+new Vector3(-e.x,-e.y,e.z),c+new Vector3(e.x,-e.y,e.z),c+new Vector3(e.x,e.y,e.z),c+new Vector3(-e.x,e.y,e.z)}.Select(v=>col.transform.InverseTransformPoint(v)).ToArray();mesh.triangles=new[]{0,2,1,0,3,2,4,5,6,4,6,7,0,1,5,0,5,4,3,7,6,3,6,2,0,4,7,0,7,3,1,2,6,1,6,5};mesh.RecalculateNormals();mesh.RecalculateBounds();col.sharedMesh=mesh;EditorUtility.SetDirty(mesh);
  }
  static void FitControls(GameObject root,MeshFilter[] meshes){
+  foreach(var side in new[]{"L","R"}){T(root,"vstab1_"+side).position=new Vector3(0,.70f,-3.71f);T(root,"vstab2_"+side).position=new Vector3(0,1.13f,-3.71f);T(root,"hstab_"+side).position=new Vector3(side=="L"?-1:1,.397f,-3.18f);}
   foreach(var p in new[]{new[]{"aileron_L","aileronG"},new[]{"aileron_R","aileronD"},new[]{"rudder_L","direction"},new[]{"elevator_L","profondeur"}}){var c=C(T(root,p[0]).gameObject,"ControlSurface");var so=new SerializedObject(c);var moving=Ref(so,"visibleMesh");var mesh=meshes.First(m=>m.name==p[1]);var b=WorldBounds(mesh);c.transform.position=b.center;moving.position=new Vector3(b.center.x,b.center.y,b.max.z);mesh.transform.SetParent(moving,true);}
-  foreach(var c in All(root,"ControlSurface").Where(c=>c.name=="rudder_R"||c.name=="elevator_R")){var s=new SerializedObject(c);Number(s,"rollRange",0);if(c.name=="rudder_R")Number(s,"yawRange",0);s.ApplyModifiedPropertiesWithoutUndo();}
+  // Both elevator force stations straddle the centerline. The source visual
+  // is a combined elevator mesh, driven in pitch only from its central hinge.
+  var elevatorMeshes=meshes.First(m=>m.name=="profondeur");var eb=WorldBounds(elevatorMeshes);var movingLeft=Ref(new SerializedObject(C(T(root,"elevator_L").gameObject,"ControlSurface")),"visibleMesh");var hold=Object.Instantiate(elevatorMeshes.gameObject);hold.transform.position=elevatorMeshes.transform.position;hold.transform.rotation=elevatorMeshes.transform.rotation;hold.transform.localScale=elevatorMeshes.transform.lossyScale;
+  T(root,"elevator_L").position=new Vector3(-1,eb.center.y,eb.center.z);movingLeft.position=new Vector3(0,eb.center.y,eb.max.z);elevatorMeshes.transform.position=hold.transform.position;elevatorMeshes.transform.rotation=hold.transform.rotation;Object.DestroyImmediate(hold);T(root,"elevator_R").position=new Vector3(1,eb.center.y,eb.center.z);
+  foreach(var c in All(root,"ControlSurface").Where(c=>c.name=="rudder_R"||c.name.StartsWith("elevator_"))){var s=new SerializedObject(c);Number(s,"rollRange",0);if(c.name=="rudder_R")Number(s,"yawRange",0);s.ApplyModifiedPropertiesWithoutUndo();}
   foreach(var side in new[]{"L","R"}){var flap=C(T(root,"flap_"+side).gameObject,"HighLiftDevice");var so=new SerializedObject(flap);var moving=so.FindProperty("movingParts").GetArrayElementAtIndex(0).FindPropertyRelative("transform").objectReferenceValue as Transform;var mesh=meshes.First(m=>m.name==(side=="L"?"voletG":"voletD"));var b=WorldBounds(mesh);flap.transform.position=b.center;moving.position=new Vector3(b.center.x,b.center.y,b.max.z);mesh.transform.SetParent(moving,true);}
  }
  static void FitGear(GameObject root,GameObject visual,MeshFilter[] meshes){

@@ -3,6 +3,7 @@ using System.Linq;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Reflection;
+using System.Reflection.Emit;
 using BepInEx;
 using HarmonyLib;
 using UnityEngine;
@@ -14,7 +15,14 @@ public sealed class A37FlightSupport : BaseUnityPlugin {
  float nextScan;
  public static bool IsA37(Aircraft a)=>a&&a.definition&&a.definition.jsonKey=="A37B_Dragonfly_Uruguay";
  void Awake(){new Harmony("vladzgrid.a37.flightsupport").PatchAll(typeof(A37FlightSupport));}
- void Update(){if(Time.unscaledTime<nextScan)return;nextScan=Time.unscaledTime+.5f;foreach(var a in FindObjectsOfType<Aircraft>(true))if(IsA37(a)&&a.partLookup!=null&&!a.GetComponent<A37SourceAnimations>())a.gameObject.AddComponent<A37SourceAnimations>();}
+ void Update(){if(Time.unscaledTime<nextScan)return;nextScan=Time.unscaledTime+.5f;foreach(var a in FindObjectsOfType<Aircraft>(true))if(IsA37(a)&&a.partLookup!=null){if(!a.GetComponent<A37SourceAnimations>())a.gameObject.AddComponent<A37SourceAnimations>();if(!a.GetComponent<A37CockpitGauges>())a.gameObject.AddComponent<A37CockpitGauges>();}}
+ [HarmonyPatch(typeof(Aircraft),"GetInputs"),HarmonyPostfix]
+ static void ManualBrake(Aircraft __instance,ControlInputs __result){if(!IsA37(__instance)||__result==null||!Rewired.ReInput.isReady)return;Aircraft local;if(GameManager.GetLocalAircraft(out local)&&local==__instance)__result.brake=Rewired.ReInput.players.GetPlayer(0).GetButton("Brake")?1:0;}
+ [HarmonyPatch(typeof(LandingGear),"FixedUpdate"),HarmonyPrefix]
+ static void WheelBrake(Aircraft ___aircraft,ControlInputs ___controlInputs){ManualBrake(___aircraft,___controlInputs);}
+ static float AutomaticBrakeThreshold(LandingGear gear){var a=AccessTools.Field(typeof(LandingGear),"aircraft").GetValue(gear) as Aircraft;Aircraft local;if(!a||!GameManager.GetLocalAircraft(out local)||local!=a)return 1;var key=a.definition?a.definition.jsonKey:"";bool existing=key=="F5E_TigerII"&&AccessTools.TypeByName("F5FlightFix")!=null||key=="Su25_Frogfoot"&&AccessTools.TypeByName("Su25FlightFix")!=null;return IsA37(a)||existing?-1:1;}
+ [HarmonyPatch(typeof(LandingGear),"FixedUpdate"),HarmonyTranspiler,HarmonyPriority(Priority.Last),HarmonyAfter("vladzgrid.f5.flightsupport","vladzgrid.su25.flightfix")]
+ static IEnumerable<CodeInstruction> AutomaticWheelBrake(IEnumerable<CodeInstruction> original){var code=original.ToList();int replaced=0;for(int i=0;i<code.Count;i++)if(code[i].opcode==OpCodes.Call&&code[i].operand is MethodInfo method&&method.Name=="AutomaticBrakeThreshold"&&(method.DeclaringType.Name=="F5FlightFix"||method.DeclaringType.Name=="Su25FlightFix")){code[i].operand=AccessTools.Method(typeof(A37FlightSupport),"AutomaticBrakeThreshold");replaced++;}for(int i=1;i<code.Count;i++)if(code[i].opcode==OpCodes.Ldc_R4&&Convert.ToSingle(code[i].operand)==1&&code[i-1].opcode==OpCodes.Ldfld&&code[i-1].operand is FieldInfo field&&field.Name=="speed"&&field.DeclaringType==typeof(Unit)){var load=new CodeInstruction(OpCodes.Ldarg_0);load.labels.AddRange(code[i].labels);load.blocks.AddRange(code[i].blocks);code[i]=load;code.Insert(++i,new CodeInstruction(OpCodes.Call,AccessTools.Method(typeof(A37FlightSupport),"AutomaticBrakeThreshold")));replaced++;}if(replaced!=1)throw new InvalidOperationException("A37 automatic-brake adaptation expected one threshold; game or another patch changed.");return code;}
  [HarmonyPatch(typeof(Aircraft),"SetComplexPhysics"),HarmonyPostfix]
  static void MassStations(Aircraft __instance){if(!IsA37(__instance))return;var seen=new HashSet<Rigidbody>();foreach(var p in __instance.partLookup.OfType<AeroPart>())if(p.rb&&seen.Add(p.rb))p.rb.centerOfMass=p.rb.transform.InverseTransformPoint(p.transform.position);Debug.Log("[A37Physics] Native complex bodies initialized with explicit mass stations.");}
  [HarmonyPatch(typeof(PylonIndicator),"UpdateImages"),HarmonyPrefix]
