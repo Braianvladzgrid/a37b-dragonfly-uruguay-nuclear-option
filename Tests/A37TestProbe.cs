@@ -115,7 +115,7 @@ public sealed class A37TestProbe:BaseUnityPlugin {
  }
  [HarmonyPatch(typeof(Aircraft),"GetInputs"),HarmonyPostfix,HarmonyPriority(Priority.Last)]
  static void Inputs(Aircraft __instance,ControlInputs __result){if(driving&&__instance==target&&__result!=null){__result.throttle=throttle;__result.pitch=pitch;__result.roll=roll;__result.yaw=yaw;__result.brake=brake;}}
- [HarmonyPatch(typeof(Aircraft),"FilterInputs"),HarmonyPrefix]static void Filter(Aircraft __instance){Inputs(__instance,__instance.GetInputs());}
+ [HarmonyPatch(typeof(Aircraft),"FilterInputs"),HarmonyPostfix,HarmonyPriority(Priority.Last)]static void Filter(Aircraft __instance){Inputs(__instance,__instance.GetInputs());}
  [HarmonyPatch(typeof(Turbojet),"FixedUpdate"),HarmonyPrefix,HarmonyPriority(Priority.Last)]static void Engine(Aircraft ___aircraft,ControlInputs ___controlInputs){Inputs(___aircraft,___controlInputs);}
  [HarmonyPatch(typeof(LandingGear),"FixedUpdate"),HarmonyPrefix,HarmonyPriority(Priority.Last)]static void Gear(Aircraft ___aircraft,ControlInputs ___controlInputs){Inputs(___aircraft,___controlInputs);}
 }

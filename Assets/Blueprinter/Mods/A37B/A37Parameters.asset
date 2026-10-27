@@ -331,28 +331,28 @@ MonoBehaviour:
       m_RotationOrder: 4
   loadouts:
   - weapons:
-    - {fileID: 0}
+    - {fileID: 11400000, guid: 9e8d05c558464a342abe7fc976d1b63a, type: 2}
     - {fileID: 0}
     - {fileID: 0}
     - {fileID: 0}
     - {fileID: 0}
   - weapons:
-    - {fileID: 11400000, guid: adcc03156c7268a44824bf9ff0627a51, type: 2}
-    - {fileID: 11400000, guid: bfe34f539b90cba4a975b0492f1a7c9d, type: 2}
-    - {fileID: 11400000, guid: a1a0598f5ed7ccb43a1210d087e67b88, type: 2}
-    - {fileID: 11400000, guid: b96ef6b8142965f46b9a03bf1904b440, type: 2}
-    - {fileID: 11400000, guid: 47a4629895d168b4bab81333c01ff3df, type: 2}
+    - {fileID: 11400000, guid: 9e8d05c558464a342abe7fc976d1b63a, type: 2}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
   StandardLoadouts: []
   DefaultFuelLevel: 0.45
   liveries:
-  - name: A-37 Camouflage (FAU markings pending)
+  - name: FAU 282 - woodland camouflage
     faction: {fileID: 11400000, guid: a7a76c7eda568b844af47ceeb429a0fc, type: 2}
     assetReference:
       m_AssetGUID: d9156fff7ff12de448015c4b014e5a52
       m_SubObjectName: 
       m_SubObjectType: 
       m_EditorAssetChanged: 0
-  - name: A-37 Camouflage (FAU markings pending)
+  - name: FAU 282 - woodland camouflage
     faction: {fileID: 11400000, guid: a7a76c7eda568b844af47ceeb429a0fc, type: 2}
     assetReference:
       m_AssetGUID: d9156fff7ff12de448015c4b014e5a52

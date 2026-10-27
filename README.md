@@ -12,8 +12,9 @@ models. See CREDITS.md.
 Integration uses the native T/A-30's two turbojets, suspension, damage and control
 systems, with A-37 geometry and a dedicated silhouette. The intended dry thrust
 is 12,680 N per engine, empty mass 2,817 kg and fuel capacity 1,536 kg. These are
-configuration targets, not measured flight results. Historical FAU markings,
-functional analog instruments and the internal minigun are still pending.
+configuration targets, not measured flight results. FAU 282 vector markings, a telemetry bridge for the original analog instruments
+and a native-system 7.62 mm minigun are integrated. Gun firing and the latest
+performance checks remain pending; see References/FLIGHT-CHECKPOINT.md.
 
 Unity 2022.3.62f2 and Blueprinter 2.0.1 are used. Import the installed Nuclear
 Option 0.34.2 game through Blueprinter to generate local placeholders and game

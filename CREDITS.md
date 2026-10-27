@@ -5,8 +5,9 @@ Aircraft: FlightGear FGAddon Cessna-A37-Dragonfly, revision 21797.
 Source: https://svn.code.sf.net/p/flightgear/fgaddon/!svn/rvr/21797/trunk/Aircraft/Cessna-A37-Dragonfly/
 The original archive, per-file checksums and GPL version 2 COPYING are preserved
 in SourceAssets. Original instrument and pilot attribution files remain in the
-archive; the pilot README credits Bertrand Augras. Subcomponent notices must be
-retained/reviewed before public distribution.
+archive; the pilot README credits Bertrand Augras. The original root GPL-2.0 notice and the pilot and livery attribution files
+have been retained and reviewed; no separate redistribution exception is
+stated in those files. The livery README credits Emmanuel Baranger, February 2026.
 
 Original source is unmodified in the ZIP. OBJ/MTL conversion preserves named
 parts, transforms, UVs and material slots. No F-5 aircraft/model artwork is copied.
