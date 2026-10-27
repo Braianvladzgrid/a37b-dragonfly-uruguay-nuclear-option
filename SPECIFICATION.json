@@ -5,7 +5,7 @@
   "rankRequired": 1,
   "valueMillions": 13,
   "price": 13000000,
-  "status": "source-verified-and-31-models-converted-not-yet-flyable",
+  "status": "compiled-and-loaded-in-hangar-flight-acceptance-pending",
   "requested_features": [
     "FAU livery",
     "dedicated icon",
@@ -53,6 +53,15 @@
         4.149446
       ]
     ],
-    "dimensions_status": "source bounds recorded; real A-37B dimensions/refueling-probe variant need validation before fitting"
+    "dimensions_status": "Visual span/length fitted to 10.93m/8.62m; XML coordinates account for Unity OBJ import mirroring. A37B refueling probe detail pending."
+  },
+  "integration": {
+    "flight_test_passed": false,
+    "donor": "T/A-30 Compass",
+    "fuel_capacity_target_kg": 1536,
+    "dry_thrust_target_n_each": 12680,
+    "empty_mass_target_kg": 2817,
+    "afterburner": false,
+    "engines": 2
   }
 }
