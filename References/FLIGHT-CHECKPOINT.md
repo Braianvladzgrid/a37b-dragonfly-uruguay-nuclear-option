@@ -77,3 +77,10 @@ AGR18 14to11, PAB1254to2to0. All37airframeparts100 at04:55:20Z,
 no failure trace. Local probe removed before normal play/distribution.
 Known cosmetic/system limits remain documented in README. Build19 is a playable
 beta, not a fully certified replica. Publication packaging follows this checkpoint.
+
+## Publication 01:59 Uruguay
+GitHub prerelease v0.1.0 uploaded and downloaded again; ZIP SHA256
+67b0e3cd077fad99be199cd9bb69c6d646c252822beef400fd449f33f61e1b56 matches.
+NOMM manifest schema valid, PR https://github.com/KopterBuzz/NOMNOM/pull/465
+submitted open; registry acceptance is up to its maintainers. Test DLL removed.
+User requested Mirage2000 next; only source/license research begins now.
