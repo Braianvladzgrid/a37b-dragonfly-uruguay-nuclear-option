@@ -25,3 +25,17 @@ are native. The test DLL must never ship or remain enabled for normal play.
 Performance results with the aerobrake incorrectly left open are invalid as
 maximum-speed measurements. Final performance, external weapons and final-build
 landing acceptance remain pending.
+
+## Build19 acceptance,2026-10-27
+Final bundleDF2AE1ABE258AB289DD00547069585CB7C025D1F433A82C50278FDBB8AA055DC.
+Takeoff04:38:25Z; near-base approach/touchdown/stop04:39:26Z, all37parts100.
+Separate clean spawn:221.00m/s=795.6km/h, altitude1690.8m, mass3418kg,
+gear up, airbrake0, full throttle, gun1422rounds, all37parts100. Stable more
+than40seconds. Gun1500to1422rounds. Native camera states and two crew observed.
+Third spawn: all8external supports occupied, mass4796kg,45%fuel. Native takeoff
+and100mclimb04:53:03Z. PAB250:2to0; AGR18:14to11; PAB125:4to2to0.
+By04:55:20Z all37airframeparts100, mass3641kg, no failure trace. Native weapon
+manager consumed rounds and aircraft mass fell after releases. Native racks
+remain visible when empty. Not all weapon guidance/third-party combinations
+were evaluated. Local test probe removed before packaging.
+README lists remaining cosmetic/system/controller/multiplayer limitations.

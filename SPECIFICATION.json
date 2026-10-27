@@ -5,7 +5,7 @@
   "rankRequired": 1,
   "valueMillions": 13,
   "price": 13000000,
-  "status": "compiled-and-loaded-in-hangar-flight-acceptance-pending",
+  "status": "playable-beta-native-flight-weapon-tests-passed",
   "requested_features": [
     "FAU livery",
     "dedicated icon",
@@ -19,7 +19,7 @@
     "pilot_seats": 2,
     "native_physics_and_damage": true,
     "external_stations_target": 8,
-    "station_count_status": "eight source attachment records found in Systems/a37-base.xml; physical clearances not yet verified"
+    "station_count_status": "eight external supports occupied in mixed-load takeoff; native bomb and rocket releases tested"
   },
   "source": {
     "repository": "FlightGear FGAddon",
@@ -56,7 +56,7 @@
     "dimensions_status": "Visual span/length fitted to 10.93m/8.62m; XML coordinates account for Unity OBJ import mirroring. A37B refueling probe detail pending."
   },
   "integration": {
-    "flight_test_passed": false,
+    "flight_test_passed": true,
     "donor": "T/A-30 Compass",
     "fuel_capacity_target_kg": 1536,
     "dry_thrust_target_n_each": 12680,

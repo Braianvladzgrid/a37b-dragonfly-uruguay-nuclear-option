@@ -58,3 +58,22 @@ fixture relocation04:31:25Z; this approach does NOT pass. Repeat near base befor
 changing the aircraft. Earlier build15 landing pass remains separately recorded.
 Build19 native engine thrust falloff begins205m/s (previous260), engineering fit,
 not a hard speed clamp. Its performance still needs measurement.
+
+## Build19 landing acceptance 01:39 Uruguay
+New spawn: three native wheels contact, all37parts100. Takeoff/climb passed
+04:38:25Z. Near-base approach fixture, gear left down, then native touchdown and
+braking. Full stop04:39:26Z; all37parts100, no joint-failure trace.
+Bundle SHA256 DF2AE1ABE258AB289DD00547069585CB7C025D1F433A82C50278FDBB8AA055DC.
+Clean performance test now uses a separate new spawn; do not combine its fuel
+and starting mass with the previous landing test.
+
+Build19 clean speed settled221.00m/s=795.6km/h, altitude1690.8m, mass3418kg,
+all37parts100, gearfold~1, airbrake0, no AB. Gun1500to1422rounds. Logged more
+than40seconds near same speed/altitude. External weapon acceptance still pending.
+
+## 01:55 final beta acceptance
+Mixed8station spawn4796kg: takeoff passed04:53:03Z, PAB2502to0,
+AGR18 14to11, PAB1254to2to0. All37airframeparts100 at04:55:20Z,
+no failure trace. Local probe removed before normal play/distribution.
+Known cosmetic/system limits remain documented in README. Build19 is a playable
+beta, not a fully certified replica. Publication packaging follows this checkpoint.

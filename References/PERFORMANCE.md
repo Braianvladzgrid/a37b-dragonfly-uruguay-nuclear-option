@@ -36,3 +36,9 @@ Engine integration uses native Turbojet.maxSpeed=205m/s as the onset of thrust
 falloff, rather than a velocity clamp. This is an engineering fit to the FAU
 speed target, not a published J85 compressor/thrust curve. Build18's previous
 260m/s onset let clean speed exceed850km/h around1720m. Build19 is unmeasured.
+
+Measured build19 clean configuration, native forces, full throttle, gear up,
+airbrake0, no external weapons, internal gun1422rounds: sustained220.96-221.00m/s
+(795.5-795.6km/h) at1690.8m, mass3448to3418kg, all37airframeparts100percent,
+04:45:56-04:46:38Z. This is one simulator configuration, not a certified real
+flight envelope or universal maximum. FAU reference770km/h remains documented.

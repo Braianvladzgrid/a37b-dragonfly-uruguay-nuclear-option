@@ -1,31 +1,35 @@
-# A-37B Dragonfly - Uruguay
+# A-37B Dragonfly Uruguay 0.1.0 Beta
 
-Work in progress: tier 1, $13,000,000. An experimental aircraft bundle now
-compiles and appears in the game's hangar. Flight acceptance is not complete;
-this repository is a development backup, not a finished release.
+Playable experimental adaptation for Nuclear Option0.34.2 and Blueprinter2.0.1.
+Tier1, price$13million. Install the nobp and A37FlightSupport.dll together in
+BepInEx/plugins/com.nikkorap.blueprinter/addons/vladzgrid.a37/ and create a new
+plane. Never install the local A37TestProbe.dll.
 
-The pinned FlightGear source includes the aircraft, cockpit, instruments, seats
-and pilots. SourceAssets retains the original archive, license and SHA-256
-manifest. Assets/Blueprinter/Mods/A37B/Models contains 31 converted OBJ/MTL
-models. See CREDITS.md.
+Includes two dry turbojets without afterburner, original cockpit/seats and two
+decorative crew, calibrated analog instruments, native functional HUD, dedicated
+catalog/map silhouette, FAU282 woodland livery/Artigas finflash, animated native
+landing gear and source doors, eight external supports and internal7.62mm gun.
 
-Integration uses the native T/A-30's two turbojets, suspension, damage and control
-systems, with A-37 geometry and a dedicated silhouette. The intended dry thrust
-is 12,680 N per engine, empty mass 2,817 kg and fuel capacity 1,536 kg. These are
-configuration targets, not measured flight results. FAU 282 vector markings, a telemetry bridge for the original analog instruments
-and a native-system 7.62 mm minigun are integrated. Native takeoff, landing and internal gun firing have passed; final performance
-and external weapon checks remain pending; see References/FLIGHT-CHECKPOINT.md.
+Native-force tests passed takeoff, near-base approach/touchdown/full stop,
+retraction/extension, camera switching, gun firing and mixed bomb/rocket release.
+Clean sustained speed measured795.6km/h at1690.8m, compared with FAU reference
+770km/h. This is an engineering adaptation, not an authenticated flight model.
+See TESTING.md and References/PERFORMANCE.md for conditions and fixture limits.
 
-Unity 2022.3.62f2 and Blueprinter 2.0.1 are used. Import the installed Nuclear
-Option 0.34.2 game through Blueprinter to generate local placeholders and game
-assemblies, which are excluded from Git. Run A37VisualBuilder.PrepareFlight in
-batch mode without -quit: it synchronizes the game assembly before resuming the
-build after a domain reload. RuntimeSupport/compile-runtime.ps1 builds the small
-visual/physics support plugin against the installed game. Tests/A37TestProbe.cs
-is a local test fixture and must never be distributed in the playable addon.
+Known limitations: number stencils partially clip into the curved fuselage;
+HUD aircraft outline/avionics still come from the native donor; original engine
+RPM/EGT instruments have no telemetry bridge; native compact backup displays
+remain. Controller orbit sensitivity, full manual handling, multiplayer and
+all combinations of third-party weapons are not certified. Test relocation
+from a distant/high-speed flight can break native joints; that fixture is not
+included in this addon. No invulnerability, velocity clamp or collision bypass.
 
-Acceptance checks will use a noncombat scenario with normal damage and physics.
-Do not classify post-impact self contacts as spontaneous structural failure.
-Public release requires source/texture attribution, a new spawn, takeoff,
-gear/camera cycling, power changes, weapon firing and a landing/brake check.
+Model: FlightGear FGAddon revision21797, Emmanuel Baranger/helijah, GPL2, with
+pilot attribution to Bertrand Augras. Original archive and corresponding model
+source are included in this repository. Integration/editor/runtime codeMIT.
+See CREDITS.md and SourceAssets/COPYING-GPL2.txt.
 
+Build with Unity2022.3.62f2 and Blueprinter2.0.1; import the installed game for
+local placeholders/assemblies (excluded from Git). Run
+A37VisualBuilder.PrepareFlight without -quit; its domain-reload continuation
+finishes the build. RuntimeSupport/compile-runtime.ps1 builds the support DLL.

@@ -16,3 +16,10 @@ by Braianvladzgrid; model-derived outputs retain their source license.
 
 Uruguayan aircraft reference: Museo Aeronautico de la Fuerza Aerea Uruguaya,
 https://museo.fau.mil.uy/aeronave/fichas/cessna_a-37_b
+
+FAU282 identification and Artigas fin flashes are original vector geometry in
+A37Markings.cs, drawn from public aircraft markings. Reference photographs were
+used only for analysis and are not included in the addon. Native game audio,
+weapon effects and HUD are referenced through Blueprinter; game assemblies and
+native donor assets are not redistributed. Dedicated silhouette is rendered
+from the GPL aircraft model. Integration/editor/runtime code is MIT.
