@@ -9,7 +9,7 @@ using UnityEngine;
 [BepInPlugin("local.a37.testprobe","Temporary A37 Test Probe","0.1.0")]
 public sealed class A37TestProbe:BaseUnityPlugin {
  const string Folder=@"C:\Users\braia\Documents\Codex\2026-10-10\tui\work\a37";
- static Aircraft target;
+ static Aircraft target; static Airbase.Runway savedRunway;static bool savedReverse;
  static bool driving,takeoff,cruise,landing,touched,fullPower; static float firingUntil,approachStarted;
  static float throttle,pitch,roll,yaw,brake=1,until,startY,runwayY,cruiseHeight=300;
  static Vector3 heading;
@@ -17,11 +17,12 @@ public sealed class A37TestProbe:BaseUnityPlugin {
  static object Field(object o,string n)=>AccessTools.Field(o.GetType(),n)?.GetValue(o);
  static bool Own(Aircraft a)=>a&&a.definition&&a.definition.jsonKey=="A37B_Dragonfly_Uruguay";
  static int traceCount;
- void Awake(){var h=new Harmony("local.a37.testprobe");h.PatchAll(typeof(A37TestProbe));
+ void Awake(){var h=new Harmony("local.a37.testprobe");h.PatchAll(typeof(A37TestProbe));h.Patch(AccessTools.Method(typeof(LandingGear),"BreakWheel"),prefix:new HarmonyMethod(typeof(A37TestProbe),nameof(TraceWheel)));
   foreach(var type in typeof(AeroPart).Assembly.GetTypes().Where(t=>t.Name=="UnitPart"||t.Name=="AeroPart"||t.Name.Contains("Tensor")))
    foreach(var method in type.GetMethods(System.Reflection.BindingFlags.Instance|System.Reflection.BindingFlags.Public|System.Reflection.BindingFlags.NonPublic|System.Reflection.BindingFlags.DeclaredOnly).Where(m=>m.Name=="ApplyDamage"||m.Name=="Part_OnTensorBreak"||m.Name=="OnJointBreak"))
     h.Patch(method,prefix:new HarmonyMethod(typeof(A37TestProbe),nameof(TraceFailure)));
  }
+ static void TraceWheel(LandingGear __instance){var a=Field(__instance,"aircraft") as Aircraft;if(!Own(a))return;File.AppendAllText(Path.Combine(Folder,"failure-trace.txt"),DateTime.UtcNow.ToString("O")+" WHEEL BREAK "+__instance.name+" hinge="+((Transform)Field(__instance,"gearHinge")).localEulerAngles+" compression="+Field(__instance,"compressionDistance")+" force="+Field(__instance,"compressionForce")+" damping="+Field(__instance,"dampingForce")+Environment.NewLine);}
  static void TraceFailure(object __instance,System.Reflection.MethodBase __originalMethod,object[] __args){
   var part=__instance as AeroPart;if(part==null||!Own(part.parentUnit as Aircraft)||traceCount++>35)return;
   File.AppendAllText(Path.Combine(Folder,"failure-trace.txt"),DateTime.UtcNow.ToString("O")+" frame="+Time.frameCount+" part="+part.name+" hp="+part.hitPoints+" method="+__originalMethod.DeclaringType.Name+"."+__originalMethod.Name+" args="+string.Join(",",__args.Select(v=>v==null?"null":v.ToString()).ToArray())+Environment.NewLine+Environment.StackTrace+Environment.NewLine);
@@ -32,28 +33,34 @@ public sealed class A37TestProbe:BaseUnityPlugin {
   if(Time.unscaledTime<next)return;next=Time.unscaledTime+1;
   if(!bindingsLogged&&Rewired.ReInput.isReady){bindingsLogged=true;foreach(var action in Rewired.ReInput.mapping.Actions)if(action.name.Contains("View")||action.name.Contains("Camera")||action.name=="Center")Log("ACTION id="+action.id+" name="+action.name);}
   Aircraft a;if(!GameManager.GetLocalAircraft(out a)||!Own(a))return;
-  if(target!=a){target=a;driving=true;takeoff=landing=false;throttle=pitch=roll=yaw=0;brake=1;until=Time.unscaledTime+600;Log("FIXTURE hold new spawn at idle with brake");}
+  if(target!=a){target=a;savedRunway=null;driving=true;takeoff=landing=false;throttle=pitch=roll=yaw=0;brake=1;until=Time.unscaledTime+1200;Log("FIXTURE hold new spawn at idle with brake");}
   if(firingUntil>0&&Time.unscaledTime>=firingUntil){a.SetFiringState(0,false);firingUntil=0;Log("GUN STOP "+Guns(a));}
   if(launchReport>0&&Time.unscaledTime>=launchReport){a.SetFiringState(launchStation,false);Log("LAUNCH AFTER "+Station(a,launchStation));launchReport=0;launchStation=-1;}
   var path=Path.Combine(Folder,"test-command.txt");
   if(File.Exists(path)) {
    var command=File.ReadAllText(path).Trim();File.Delete(path);target=a;
    try {
-    if(command=="place_runway"||command=="approach") {
-     var airbase=a.GetAirbase()??FindObjectsOfType<Airbase>().OrderBy(b=>Vector3.Distance(b.transform.position,a.transform.position)).First();
-     var usage=typeof(Airbase).GetMethod("GetTakeoffRunway").Invoke(airbase,new object[]{a,600f});
-     var runway=(Airbase.Runway)usage.GetType().GetField("Runway").GetValue(usage);bool reverse=(bool)usage.GetType().GetField("Reverse").GetValue(usage);
+    if(command=="diagnose_gear") {
+     foreach(var g in FindObjectsOfType<LandingGear>().Where(g=>(Aircraft)Field(g,"aircraft")==a)){
+      var cp=(Transform)Field(g,"castPoint");var hit=Field(g,"contactCollider") as Collider;
+      Log("DIAG "+g.name+" castWorld="+cp.position+" up="+cp.up+" rotation="+cp.eulerAngles+" enabled="+g.enabled+" hinge="+((Transform)Field(g,"gearHinge")).localEulerAngles+" travel="+Field(g,"suspensionTravel")+" hit="+(hit?hit.name+" layer="+hit.gameObject.layer:"none"));
+      foreach(var h in Physics.RaycastAll(cp.position+Vector3.up*5,Vector3.down,20).OrderBy(h=>h.distance))Log("DIAG RAY "+h.collider.name+" layer="+h.collider.gameObject.layer+" point="+h.point+" distance="+h.distance+" owned="+h.collider.GetComponentInParent<Aircraft>());
+     }
+    } else if(command=="place_runway"||command=="approach") {
+     if(savedRunway==null){var airbase=a.GetAirbase()??FindObjectsOfType<Airbase>().OrderBy(b=>Vector3.Distance(b.transform.position,a.transform.position)).First();var usage=typeof(Airbase).GetMethod("GetTakeoffRunway").Invoke(airbase,new object[]{a,600f});savedRunway=(Airbase.Runway)usage.GetType().GetField("Runway").GetValue(usage);savedReverse=(bool)usage.GetType().GetField("Reverse").GetValue(usage);if(savedRunway==null)throw new Exception("No suitable runway; retaining current flight controls");}
+     var runway=savedRunway;bool reverse=savedReverse;
      var near=reverse?runway.End:runway.Start;var far=reverse?runway.Start:runway.End;heading=Vector3.ProjectOnPlane(far.position-near.position,Vector3.up).normalized;
-     runwayY=near.position.y;var origin=a.transform.position;var rotation=Quaternion.LookRotation(heading)*Quaternion.Inverse(a.transform.rotation);var destination=command=="approach"?near.position+heading*100+Vector3.up*25:near.position+heading*100+Vector3.up*1.6f;
+     var ground=near.position+heading*100;var groundHits=Physics.RaycastAll(ground+Vector3.up*100,Vector3.down,200).Where(h=>!h.collider.isTrigger&&h.collider.gameObject.layer==6).OrderBy(h=>h.distance).ToArray();if(groundHits.Length==0)throw new Exception("No verified runway surface");ground.y=groundHits[0].point.y;Log("RUNWAY marker="+near.position+" surface="+ground+" collider="+groundHits[0].collider.name);runwayY=ground.y;var origin=a.transform.position;var rotation=Quaternion.LookRotation(heading)*Quaternion.Inverse(a.transform.rotation);var destination=command=="approach"?ground+Vector3.up*25:ground+Vector3.up*1.50f;
      // Suspension bodies are not AeroParts. Omitting them tears native joints on teleport.
      var bodies=a.partLookup.OfType<AeroPart>().SelectMany(p=>p.GetComponentsInChildren<Rigidbody>(true)).Concat(a.GetComponentsInChildren<Rigidbody>(true)).Concat(a.partLookup.OfType<AeroPart>().Select(p=>p.rb)).Where(b=>b).Distinct().ToArray();
+     var hingePoses=FindObjectsOfType<LandingGear>().Where(g=>(Aircraft)Field(g,"aircraft")==a).Select(g=>(Transform)Field(g,"gearHinge")).Select(h=>new{hinge=h,position=h.localPosition,rotation=h.localRotation}).ToArray();
      var poses=bodies.Select(b=>new{body=b,position=destination+rotation*(b.position-origin),rotation=rotation*b.rotation}).ToArray();
      a.transform.SetPositionAndRotation(destination,Quaternion.LookRotation(heading));
      foreach(var p in poses){p.body.position=p.position;p.body.rotation=p.rotation;p.body.velocity=command=="approach"?heading*95:Vector3.zero;p.body.angularVelocity=Vector3.zero;}
-     Physics.SyncTransforms();a.SetGear(true);driving=true;takeoff=landing=false;throttle=pitch=roll=yaw=0;brake=1;until=Time.unscaledTime+180;
+     Physics.SyncTransforms();foreach(var h in hingePoses){h.hinge.localPosition=h.position;h.hinge.localRotation=h.rotation;}Physics.SyncTransforms();a.SetGear(true);driving=true;takeoff=landing=false;throttle=pitch=roll=yaw=0;brake=1;until=Time.unscaledTime+180;
      if(command=="approach"){landing=true;touched=false;approachStarted=Time.unscaledTime;throttle=.25f;brake=0;until=Time.unscaledTime+120;}
      Log("FIXTURE placed at runway; subsequent motion uses native forces. bodies="+bodies.Length+" heading="+heading);
-    } else if(command=="takeoff") {driving=takeoff=true;landing=false;cruise=false;startY=a.GlobalPosition().y;until=Time.unscaledTime+600;throttle=1;brake=0;}
+    } else if(command=="takeoff") {driving=takeoff=true;landing=false;cruise=false;startY=a.GlobalPosition().y;until=Time.unscaledTime+1200;throttle=1;brake=0;}
     else if(command=="full_power"){fullPower=true;cruiseHeight=1500;Log("SPEED TEST full power; native forces and controlled altitude, no speed hold");}
     else if(command=="cruise"){fullPower=false;}
     else if(command=="view_side"||command=="view_back"){
@@ -72,12 +79,13 @@ public sealed class A37TestProbe:BaseUnityPlugin {
     else if(command=="gear_down")a.SetGear(true);
     else if(command.StartsWith("throttle ")){driving=true;takeoff=false;throttle=float.Parse(command.Substring(9),System.Globalization.CultureInfo.InvariantCulture);pitch=roll=yaw=brake=0;until=Time.unscaledTime+30;}
     Log("COMMAND "+command);
-   }catch(Exception ex){Log("COMMAND FAILED "+ex);driving=takeoff=landing=false;}
+   }catch(Exception ex){Log("COMMAND FAILED, retaining previous test inputs: "+ex);}
   }
   var rb=a.CockpitRB();var input=a.GetInputs();
   var cam=FindObjectOfType<CameraStateManager>();Log("CAMERA "+(cam?cam.currentState.GetType().Name:"none")+" pan="+(cam?Field(cam.currentState,"panView"):null)+" tilt="+(cam?Field(cam.currentState,"tiltView"):null));
   Log("speed="+rb.velocity.magnitude+" altitude="+a.GlobalPosition().y+" mass="+a.GetMass()+" CG="+a.transform.InverseTransformPoint(a.GetCenterOfMass())+" controls="+input.throttle+","+input.pitch+","+input.roll+","+input.yaw+","+input.brake+" rotation="+a.transform.eulerAngles+" health="+string.Join(",",a.partLookup.Select(p=>p.name+":"+p.hitPoints).ToArray()));
   foreach(var g in FindObjectsOfType<LandingGear>().Where(g=>(Aircraft)Field(g,"aircraft")==a))Log("GEAR "+g.name+" fold="+Field(g,"foldAmount")+" compression="+Field(g,"compressionDistance")+" contact="+g.WeightOnWheel(.1f)+" bump="+a.transform.InverseTransformPoint(((GameObject)Field(g,"bumpStop")).transform.position));
+  foreach(var b in FindObjectsOfType<Airbrake>().Where(b=>(Aircraft)Field(b,"aircraft")==a)){var controls=Field(b,"controlInputs") as ControlInputs;Log("AIRBRAKE "+b.name+" open="+Field(b,"openAmount")+" cachedThrottle="+(controls==null?-1:controls.throttle));}
   foreach(var e in FindObjectsOfType<Turbojet>().Where(e=>(Aircraft)Field(e,"aircraft")==a)){
    Log("ENGINE "+e.name+" max="+Field(e,"maxThrust")+" current="+Field(e,"thrust")+" afterburnerOn="+Field(e,"afterburnerOn"));
    foreach(var nozzle in (Array)Field(e,"nozzles"))foreach(var burner in (Array)Field(nozzle,"afterburners")){
