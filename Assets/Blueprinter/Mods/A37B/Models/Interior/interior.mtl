@@ -1,0 +1,10 @@
+newmtl interior_material_0
+Kd 1.0 1.0 1.0
+d 0.15000000000000002
+illum 2
+map_Kd interior.png
+newmtl interior_material_1
+Kd 1.0 1.0 1.0
+d 1.0
+illum 2
+map_Kd interior.png

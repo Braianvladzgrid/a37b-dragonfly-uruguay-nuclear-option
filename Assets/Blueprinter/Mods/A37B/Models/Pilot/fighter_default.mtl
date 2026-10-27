@@ -1,0 +1,10 @@
+newmtl fighter_default_material_0
+Kd 1.0 1.0 1.0
+d 1.0
+illum 2
+map_Kd fighter_pilot.png
+newmtl fighter_default_material_1
+Kd 1.0 1.0 1.0
+d 1.0
+illum 2
+map_Kd transp.png

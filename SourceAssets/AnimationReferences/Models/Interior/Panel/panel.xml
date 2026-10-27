@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>panel.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>panel</object-name>
+
+    <!-- Objets transparents -->
+  </animation>
+
+  <model>
+    <path>Pedestal/all-pedestals.xml</path>
+  </model>
+
+  <model>
+    <path>Instruments/ai/ai.xml</path>
+    <offsets>
+      <x-m> -0.065 </x-m>
+      <y-m> -0.283 </y-m>
+      <z-m> -0.054 </z-m>
+    </offsets>
+    <overlay>
+      <animation n="100">
+        <type>scale</type>
+        <property>constants/zero</property>
+        <x-offset> 0.735 </x-offset>
+        <y-offset> 0.735 </y-offset>
+        <z-offset> 0.735 </z-offset>
+      </animation>
+    </overlay>
+  </model>
+
+  <model>
+    <path>Instruments/ai/ai.xml</path>
+    <offsets>
+      <x-m> -0.065 </x-m>
+      <y-m>  0.442 </y-m>
+      <z-m>  0.000 </z-m>
+    </offsets>
+    <overlay>
+      <animation n="100">
+        <type>scale</type>
+        <property>constants/zero</property>
+        <x-offset> 0.735 </x-offset>
+        <y-offset> 0.735 </y-offset>
+        <z-offset> 0.735 </z-offset>
+      </animation>
+    </overlay>
+  </model>
+
+  <model>
+    <path>Instruments/alt/alt.xml</path>
+    <offsets>
+      <x-m> -0.063 </x-m>
+      <y-m> -0.365 </y-m>
+      <z-m> -0.142 </z-m>
+    </offsets>
+    <overlay>
+      <animation n="100">
+        <type>scale</type>
+        <property>constants/zero</property>
+        <x-offset> 0.990 </x-offset>
+        <y-offset> 0.990 </y-offset>
+        <z-offset> 0.990 </z-offset>
+      </animation>
+    </overlay>
+  </model>
+
+  <model>
+    <path>Instruments/alt/alt.xml</path>
+    <offsets>
+      <x-m> -0.063 </x-m>
+      <y-m>  0.360 </y-m>
+      <z-m> -0.082 </z-m>
+    </offsets>
+    <overlay>
+      <animation n="100">
+        <type>scale</type>
+        <property>constants/zero</property>
+        <x-offset> 0.990 </x-offset>
+        <y-offset> 0.990 </y-offset>
+        <z-offset> 0.990 </z-offset>
+      </animation>
+    </overlay>
+  </model>
+
+  <model>
+    <path>Instruments/ammeter/ammeter.xml</path>
+    <offsets>
+      <x-m> -0.04358 </x-m>
+      <y-m>  0.19626 </y-m>
+      <z-m> -0.12000 </z-m>
+      <heading-deg> -10 </heading-deg>
+    </offsets>
+    <overlay>
+      <animation n="100">
+        <type>scale</type>
+        <property>constants/zero</property>
+        <x-offset> 0.500 </x-offset>
+        <y-offset> 0.500 </y-offset>
+        <z-offset> 0.500 </z-offset>
+      </animation>
+    </overlay>
+  </model>
+
+  <model>
+    <path>Instruments/asi/asi.xml</path>
+    <offsets>
+      <x-m> -0.060 </x-m>
+      <y-m> -0.365 </y-m>
+      <z-m> -0.054 </z-m>
+    </offsets>
+    <overlay>
+      <animation n="100">
+        <type>scale</type>
+        <property>constants/zero</property>
+        <x-offset> 0.910 </x-offset>
+        <y-offset> 0.910 </y-offset>
+        <z-offset> 0.910 </z-offset>
+      </animation>
+    </overlay>
+  </model>
+
+  <model>
+    <path>Instruments/asi/asi.xml</path>
+    <offsets>
+      <x-m> -0.060 </x-m>
+      <y-m>  0.360 </y-m>
+      <z-m>  0.000 </z-m>
+    </offsets>
+    <overlay>
+      <animation n="100">
+        <type>scale</type>
+        <property>constants/zero</property>
+        <x-offset> 0.910 </x-offset>
+        <y-offset> 0.910 </y-offset>
+        <z-offset> 0.910 </z-offset>
+      </animation>
+    </overlay>
+  </model>
+
+  <model>
+    <path>Instruments/clock/clock.xml</path>
+    <offsets>
+      <x-m> -0.071 </x-m>
+      <y-m> -0.161 </y-m>
+      <z-m>  0.026 </z-m>
+    </offsets>
+    <overlay>
+      <animation n="100">
+        <type>scale</type>
+        <property>constants/zero</property>
+        <x-offset> 1.010 </x-offset>
+        <y-offset> 1.010 </y-offset>
+        <z-offset> 1.010 </z-offset>
+      </animation>
+    </overlay>
+  </model>
+
+  <model>
+    <path>Instruments/exhaust/exhaust0.xml</path>
+    <offsets>
+      <x-m> -0.069 </x-m>
+      <y-m> -0.028 </y-m>
+      <z-m> -0.029 </z-m>
+    </offsets>
+    <overlay>
+      <animation n="100">
+        <type>scale</type>
+        <property>constants/zero</property>
+        <x-offset> 0.930 </x-offset>
+        <y-offset> 0.930 </y-offset>
+        <z-offset> 0.930 </z-offset>
+      </animation>
+    </overlay>
+  </model>
+
+  <model>
+    <path>Instruments/exhaust/exhaust1.xml</path>
+    <offsets>
+      <x-m> -0.069 </x-m>
+      <y-m>  0.024 </y-m>
+      <z-m> -0.029 </z-m>
+    </offsets>
+    <overlay>
+      <animation n="100">
+        <type>scale</type>
+        <property>constants/zero</property>
+        <x-offset> 0.930 </x-offset>
+        <y-offset> 0.930 </y-offset>
+        <z-offset> 0.930 </z-offset>
+      </animation>
+    </overlay>
+  </model>
+
+  <model>
+    <path>Instruments/fflow/fflow0.xml</path>
+    <offsets>
+      <x-m> -0.069 </x-m>
+      <y-m> -0.028 </y-m>
+      <z-m> -0.079 </z-m>
+    </offsets>
+    <overlay>
+      <animation n="100">
+        <type>scale</type>
+        <property>constants/zero</property>
+        <x-offset> 0.950 </x-offset>
+        <y-offset> 0.950 </y-offset>
+        <z-offset> 0.950 </z-offset>
+      </animation>
+    </overlay>
+  </model>
+
+  <model>
+    <path>Instruments/fflow/fflow1.xml</path>
+    <offsets>
+      <x-m> -0.069 </x-m>
+      <y-m>  0.024 </y-m>
+      <z-m> -0.079 </z-m>
+    </offsets>
+    <overlay>
+      <animation n="100">
+        <type>scale</type>
+        <property>constants/zero</property>
+        <x-offset> 0.950 </x-offset>
+        <y-offset> 0.950 </y-offset>
+        <z-offset> 0.950 </z-offset>
+      </animation>
+    </overlay>
+  </model>
+
+  <model>
+    <path>Instruments/flaps/flaps.xml</path>
+    <offsets>
+      <x-m> -0.072 </x-m>
+      <y-m> -0.454 </y-m>
+      <z-m> -0.041 </z-m>
+    </offsets>
+    <overlay>
+      <animation n="100">
+        <type>scale</type>
+        <property>constants/zero</property>
+        <x-offset> 1.940 </x-offset>
+        <y-offset> 1.940 </y-offset>
+        <z-offset> 1.940 </z-offset>
+      </animation>
+    </overlay>
+  </model>
+
+  <model>
+    <path>Instruments/FuelGauge/FuelGauge0.xml</path>
+    <offsets>
+      <x-m> -0.064 </x-m>
+      <y-m>  0.101 </y-m>
+      <z-m> -0.053 </z-m>
+      <heading-deg> -10 </heading-deg>
+    </offsets>
+    <overlay>
+      <animation n="100">
+        <type>scale</type>
+        <property>constants/zero</property>
+        <x-offset> 0.700 </x-offset>
+        <y-offset> 0.700 </y-offset>
+        <z-offset> 0.700 </z-offset>
+      </animation>
+    </overlay>
+  </model>
+
+  <model>
+    <path>Instruments/FuelGauge/FuelGauge1.xml</path>
+    <offsets>
+      <x-m> -0.053 </x-m>
+      <y-m>  0.158 </y-m>
+      <z-m> -0.053 </z-m>
+      <heading-deg> -10 </heading-deg>
+    </offsets>
+    <overlay>
+      <animation n="100">
+        <type>scale</type>
+        <property>constants/zero</property>
+        <x-offset> 0.700 </x-offset>
+        <y-offset> 0.700 </y-offset>
+        <z-offset> 0.700 </z-offset>
+      </animation>
+    </overlay>
+  </model>
+
+  <model>
+    <path>Instruments/gears/gear.xml</path>
+    <offsets>
+      <x-m> -0.070 </x-m>
+      <y-m> -0.522 </y-m>
+      <z-m> -0.040 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Instruments/gmeter/gmeter.xml</path>
+    <offsets>
+      <x-m> -0.069 </x-m>
+      <y-m> -0.227 </y-m>
+      <z-m>  0.026 </z-m>
+    </offsets>
+    <overlay>
+      <animation n="100">
+        <type>scale</type>
+        <property>constants/zero</property>
+        <x-offset> 1.470 </x-offset>
+        <y-offset> 1.470 </y-offset>
+        <z-offset> 1.470 </z-offset>
+      </animation>
+    </overlay>
+  </model>
+
+  <model>
+    <path>Instruments/hsi/hsi.xml</path>
+    <offsets>
+      <x-m> -0.066 </x-m>
+      <y-m> -0.282 </y-m>
+      <z-m> -0.145 </z-m>
+    </offsets>
+    <overlay>
+      <animation n="100">
+        <type>scale</type>
+        <property>constants/zero</property>
+        <x-offset> 0.632 </x-offset>
+        <y-offset> 0.632 </y-offset>
+        <z-offset> 0.632 </z-offset>
+      </animation>
+    </overlay>
+  </model>
+
+  <model>
+    <path>Instruments/hsi/hsi.xml</path>
+    <offsets>
+      <x-m> -0.066 </x-m>
+      <y-m>  0.442 </y-m>
+      <z-m> -0.091 </z-m>
+    </offsets>
+    <overlay>
+      <animation n="100">
+        <type>scale</type>
+        <property>constants/zero</property>
+        <x-offset> 0.632 </x-offset>
+        <y-offset> 0.632 </y-offset>
+        <z-offset> 0.632 </z-offset>
+      </animation>
+    </overlay>
+  </model>
+
+  <model>
+    <path>Instruments/hydpress/hydpress.xml</path>
+    <offsets>
+      <x-m> -0.069 </x-m>
+      <y-m> -0.099 </y-m>
+      <z-m>  0.022 </z-m>
+    </offsets>
+    <overlay>
+      <animation n="100">
+        <type>scale</type>
+        <property>constants/zero</property>
+        <x-offset> 0.648 </x-offset>
+        <y-offset> 0.648 </y-offset>
+        <z-offset> 0.648 </z-offset>
+      </animation>
+    </overlay>
+  </model>
+
+  <model>
+    <path>Instruments/oilpress/oilpress0.xml</path>
+    <offsets>
+      <x-m> -0.069 </x-m>
+      <y-m> -0.028 </y-m>
+      <z-m> -0.131 </z-m>
+    </offsets>
+    <overlay>
+      <animation n="100">
+        <type>scale</type>
+        <property>constants/zero</property>
+        <x-offset> 0.950 </x-offset>
+        <y-offset> 0.950 </y-offset>
+        <z-offset> 0.950 </z-offset>
+      </animation>
+    </overlay>
+  </model>
+
+  <model>
+    <path>Instruments/oilpress/oilpress1.xml</path>
+    <offsets>
+      <x-m> -0.069 </x-m>
+      <y-m>  0.024 </y-m>
+      <z-m> -0.131 </z-m>
+    </offsets>
+    <overlay>
+      <animation n="100">
+        <type>scale</type>
+        <property>constants/zero</property>
+        <x-offset> 0.950 </x-offset>
+        <y-offset> 0.950 </y-offset>
+        <z-offset> 0.950 </z-offset>
+      </animation>
+    </overlay>
+  </model>
+
+  <model>
+    <path>Instruments/rmi/rmi.xml</path>
+    <offsets>
+      <x-m> -0.068 </x-m>
+      <y-m> -0.200 </y-m>
+      <z-m> -0.054 </z-m>
+    </offsets>
+    <overlay>
+      <animation n="100">
+        <type>scale</type>
+        <property>constants/zero</property>
+        <x-offset> 0.760 </x-offset>
+        <y-offset> 0.760 </y-offset>
+        <z-offset> 0.760 </z-offset>
+      </animation>
+    </overlay>
+  </model>
+
+  <model>
+    <path>Instruments/switch/all-switchs.xml</path>
+  </model>
+
+  <model>
+    <path>Instruments/tac/tac0.xml</path>
+    <offsets>
+      <x-m> -0.069 </x-m>
+      <y-m> -0.028 </y-m>
+      <z-m>  0.022 </z-m>
+    </offsets>
+    <overlay>
+      <animation n="100">
+        <type>scale</type>
+        <property>constants/zero</property>
+        <x-offset> 0.653 </x-offset>
+        <y-offset> 0.653 </y-offset>
+        <z-offset> 0.653 </z-offset>
+      </animation>
+    </overlay>
+  </model>
+
+  <model>
+    <path>Instruments/tac/tac0.xml</path>
+    <offsets>
+      <x-m> -0.069 </x-m>
+      <y-m>  0.024 </y-m>
+      <z-m>  0.022 </z-m>
+    </offsets>
+    <overlay>
+      <animation n="100">
+        <type>scale</type>
+        <property>constants/zero</property>
+        <x-offset> 0.653 </x-offset>
+        <y-offset> 0.653 </y-offset>
+        <z-offset> 0.653 </z-offset>
+      </animation>
+    </overlay>
+  </model>
+
+  <model>
+    <path>Instruments/turn/turn.xml</path>
+    <offsets>
+      <x-m> -0.068 </x-m>
+      <y-m> -0.116 </y-m>
+      <z-m> -0.054 </z-m>
+    </offsets>
+    <overlay>
+      <animation n="100">
+        <type>scale</type>
+        <property>constants/zero</property>
+        <x-offset> 0.940 </x-offset>
+        <y-offset> 0.940 </y-offset>
+        <z-offset> 0.940 </z-offset>
+      </animation>
+    </overlay>
+  </model>
+
+  <model>
+    <path>Instruments/voltmeter/voltmeter.xml</path>
+    <offsets>
+      <x-m> -0.06142 </x-m>
+      <y-m>  0.10074 </y-m>
+      <z-m> -0.12000 </z-m>
+      <heading-deg> -10 </heading-deg>
+    </offsets>
+    <overlay>
+      <animation n="100">
+        <type>scale</type>
+        <property>constants/zero</property>
+        <x-offset> 0.830 </x-offset>
+        <y-offset> 0.830 </y-offset>
+        <z-offset> 0.830 </z-offset>
+      </animation>
+    </overlay>
+  </model>
+
+  <model>
+    <path>Instruments/voltmeter/voltmeter.xml</path>
+    <offsets>
+      <x-m> -0.05191 </x-m>
+      <y-m>  0.14899 </y-m>
+      <z-m> -0.12000 </z-m>
+      <heading-deg> -10 </heading-deg>
+    </offsets>
+    <overlay>
+      <animation n="100">
+        <type>scale</type>
+        <property>constants/zero</property>
+        <x-offset> 0.830 </x-offset>
+        <y-offset> 0.830 </y-offset>
+        <z-offset> 0.830 </z-offset>
+      </animation>
+    </overlay>
+  </model>
+
+  <model>
+    <path>Instruments/vor/vor.xml</path>
+    <offsets>
+      <x-m> -0.065 </x-m>
+      <y-m> -0.116 </y-m>
+      <z-m> -0.142 </z-m>
+    </offsets>
+    <overlay>
+      <animation n="100">
+        <type>scale</type>
+        <property>constants/zero</property>
+        <x-offset> 0.690 </x-offset>
+        <y-offset> 0.690 </y-offset>
+        <z-offset> 0.690 </z-offset>
+      </animation>
+    </overlay>
+  </model>
+
+  <model>
+    <path>Instruments/vsi/vsi.xml</path>
+    <offsets>
+      <x-m> -0.060 </x-m>
+      <y-m> -0.200 </y-m>
+      <z-m> -0.142 </z-m>
+    </offsets>
+    <overlay>
+      <animation n="100">
+        <type>scale</type>
+        <property>constants/zero</property>
+        <x-offset> 1.140 </x-offset>
+        <y-offset> 1.140 </y-offset>
+        <z-offset> 1.140 </z-offset>
+      </animation>
+    </overlay>
+  </model>
+
+  <model>
+    <path>Instruments/warning/warning.xml</path>
+    <offsets>
+      <x-m> -0.035 </x-m>
+      <y-m>  0.236 </y-m>
+      <z-m> -0.021 </z-m>
+      <heading-deg> -10 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Instruments/yokes/all-yokes.xml</path>
+  </model>
+
+</PropertyList>

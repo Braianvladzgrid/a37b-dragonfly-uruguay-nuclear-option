@@ -1,0 +1,9 @@
+newmtl voltmeter_material_0
+Kd 1.0 1.0 1.0
+d 1.0
+illum 2
+map_Kd voltmeter.png
+newmtl voltmeter_material_1
+Kd 0.547091 0.565624 0.595981
+d 0.30000000000000004
+illum 2

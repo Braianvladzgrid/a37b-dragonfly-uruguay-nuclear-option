@@ -1,0 +1,866 @@
+[
+  {
+    "mesh": "a37.ac",
+    "vertices": 13204,
+    "triangles": 23606,
+    "parts": [
+      "part",
+      "ADFantenne",
+      "HDRverriere",
+      "HDRvitres",
+      "aileronD",
+      "aileronG",
+      "ailes",
+      "ailes2",
+      "antennes",
+      "axeA1",
+      "axeA2",
+      "axeAB",
+      "axeAH",
+      "axeD1",
+      "axeD2",
+      "axeDB",
+      "axeDH",
+      "axeG1",
+      "axeG2",
+      "axeGB",
+      "axeGH",
+      "beacon",
+      "direction",
+      "fuselage",
+      "lampeGreen",
+      "lampeRed",
+      "porteAD",
+      "porteAG",
+      "porteD1",
+      "porteD2",
+      "porteG1",
+      "porteG2",
+      "profondeur",
+      "pylons",
+      "rebord",
+      "roueA",
+      "roueD",
+      "roueG",
+      "spoiler",
+      "spoilerD",
+      "spoilerG",
+      "supportlampes",
+      "tiptanks",
+      "tourverriere",
+      "trous",
+      "verriere",
+      "vitres",
+      "voletD",
+      "voletG"
+    ],
+    "bounds": [
+      [
+        -5.984735,
+        -1.349997,
+        -4.307729
+      ],
+      [
+        5.984735,
+        1.350994,
+        4.149446
+      ]
+    ]
+  },
+  {
+    "mesh": "Interior\\interior.ac",
+    "vertices": 1816,
+    "triangles": 2744,
+    "parts": [
+      "part",
+      "HDRintverriere",
+      "HDRintvitres",
+      "cloison",
+      "interieur",
+      "inttourverriere",
+      "inttourvitres.001",
+      "intverriere",
+      "intvitres",
+      "planchet",
+      "verrin1",
+      "verrin2"
+    ],
+    "bounds": [
+      [
+        -0.713475,
+        -0.689335,
+        0.350833
+      ],
+      [
+        0.713475,
+        0.357692,
+        2.626033
+      ]
+    ]
+  },
+  {
+    "mesh": "Interior\\Panel\\Instruments\\ai\\ai.ac",
+    "vertices": 885,
+    "triangles": 1326,
+    "parts": [
+      "part",
+      "AttitudeBall",
+      "Fond",
+      "SkyPointer",
+      "ai-ring",
+      "bank-index",
+      "barre",
+      "barre1",
+      "barre2",
+      "bouton",
+      "course-flag",
+      "gs-scale",
+      "ils-flag",
+      "nav-pitch-steering-ba",
+      "nav-yaw-steering-bar",
+      "ring-slip",
+      "slip-ball",
+      "visses",
+      "vitre"
+    ],
+    "bounds": [
+      [
+        -0.054791,
+        -0.054792,
+        -0.015964
+      ],
+      [
+        0.054791,
+        0.054792,
+        0.093385
+      ]
+    ]
+  },
+  {
+    "mesh": "Interior\\Panel\\Instruments\\alt\\alt.ac",
+    "vertices": 725,
+    "triangles": 1048,
+    "parts": [
+      "part",
+      "cover",
+      "face",
+      "fond",
+      "knob",
+      "needle1",
+      "needle2",
+      "needle3",
+      "pressure",
+      "vitre",
+      "warning"
+    ],
+    "bounds": [
+      [
+        -0.041931,
+        -0.041424,
+        -0.011911
+      ],
+      [
+        0.041931,
+        0.041424,
+        0.002387
+      ]
+    ]
+  },
+  {
+    "mesh": "Interior\\Panel\\Instruments\\ammeter\\ammeter.ac",
+    "vertices": 284,
+    "triangles": 369,
+    "parts": [
+      "part",
+      "face",
+      "fond",
+      "needle",
+      "vitre"
+    ],
+    "bounds": [
+      [
+        -0.041985,
+        -0.041329,
+        -0.004496
+      ],
+      [
+        0.041708,
+        0.042065,
+        0.003385
+      ]
+    ]
+  },
+  {
+    "mesh": "Interior\\Panel\\Instruments\\asi\\asi.ac",
+    "vertices": 576,
+    "triangles": 937,
+    "parts": [
+      "part",
+      "drum",
+      "face",
+      "fond",
+      "needle",
+      "vitre"
+    ],
+    "bounds": [
+      [
+        -0.04483,
+        -0.044288,
+        -0.008717
+      ],
+      [
+        0.04483,
+        0.044288,
+        0.059094
+      ]
+    ]
+  },
+  {
+    "mesh": "Interior\\Panel\\Instruments\\clock\\clock.ac",
+    "vertices": 398,
+    "triangles": 562,
+    "parts": [
+      "part",
+      "face",
+      "fond",
+      "hours",
+      "minutes",
+      "seconds",
+      "vitre"
+    ],
+    "bounds": [
+      [
+        -0.029184,
+        -0.028728,
+        -0.0056
+      ],
+      [
+        0.028991,
+        0.029239,
+        -0.000122
+      ]
+    ]
+  },
+  {
+    "mesh": "Interior\\Panel\\Instruments\\exhaust\\exhaust.ac",
+    "vertices": 268,
+    "triangles": 397,
+    "parts": [
+      "part",
+      "face",
+      "fond",
+      "needle",
+      "vitre"
+    ],
+    "bounds": [
+      [
+        -0.02653,
+        -0.026631,
+        -0.002534
+      ],
+      [
+        0.02653,
+        0.026632,
+        0.002534
+      ]
+    ]
+  },
+  {
+    "mesh": "Interior\\Panel\\Instruments\\fflow\\fflow.ac",
+    "vertices": 213,
+    "triangles": 309,
+    "parts": [
+      "part",
+      "face",
+      "fond",
+      "needle",
+      "vitre"
+    ],
+    "bounds": [
+      [
+        -0.026052,
+        -0.025765,
+        -0.002349
+      ],
+      [
+        0.026052,
+        0.025765,
+        0.002349
+      ]
+    ]
+  },
+  {
+    "mesh": "Interior\\Panel\\Instruments\\flaps\\flaps.ac",
+    "vertices": 266,
+    "triangles": 376,
+    "parts": [
+      "part",
+      "face",
+      "fond",
+      "needle",
+      "vitre"
+    ],
+    "bounds": [
+      [
+        -0.012389,
+        -0.012389,
+        -0.0024550000000000006
+      ],
+      [
+        0.012389,
+        0.012389,
+        -0.00014699999999999956
+      ]
+    ]
+  },
+  {
+    "mesh": "Interior\\Panel\\Instruments\\FuelGauge\\FuelGauge.ac",
+    "vertices": 262,
+    "triangles": 366,
+    "parts": [
+      "part",
+      "face",
+      "fond",
+      "ptrL",
+      "ptrR",
+      "vitre"
+    ],
+    "bounds": [
+      [
+        -0.035339,
+        -0.035513,
+        -0.009437
+      ],
+      [
+        0.03572,
+        0.035547,
+        -0.002972
+      ]
+    ]
+  },
+  {
+    "mesh": "Interior\\Panel\\Instruments\\gears\\gear.ac",
+    "vertices": 1733,
+    "triangles": 3113,
+    "parts": [
+      "part",
+      "LuzAlrmGreenOn.001",
+      "LuzAlrmGreenOn.002",
+      "base",
+      "gear",
+      "gearAOFF",
+      "gearAON",
+      "gearLOFF",
+      "gearLON",
+      "gearROFF",
+      "gearRON",
+      "gearwarningOff",
+      "gearwarningOn"
+    ],
+    "bounds": [
+      [
+        -0.036332,
+        -0.136388,
+        -0.061182
+      ],
+      [
+        0.10147300000000001,
+        0.020761999999999996,
+        0.007514
+      ]
+    ]
+  },
+  {
+    "mesh": "Interior\\Panel\\Instruments\\gmeter\\gmeter.ac",
+    "vertices": 368,
+    "triangles": 487,
+    "parts": [
+      "part",
+      "face",
+      "fond",
+      "g-Needle1",
+      "g-Needle2",
+      "g-Needle3",
+      "vitre"
+    ],
+    "bounds": [
+      [
+        -0.020001,
+        -0.018294,
+        -0.001706
+      ],
+      [
+        0.019869,
+        0.021293,
+        0.000489
+      ]
+    ]
+  },
+  {
+    "mesh": "Interior\\Panel\\Instruments\\hsi\\hsi.ac",
+    "vertices": 468,
+    "triangles": 539,
+    "parts": [
+      "part",
+      "HSI",
+      "HSI.card",
+      "HSI.crs1",
+      "HSI.crs10",
+      "HSI.crs100",
+      "HSI.crsdeflection",
+      "HSI.crsknob",
+      "HSI.crsneedle",
+      "HSI.dst0",
+      "HSI.dst1",
+      "HSI.dst10",
+      "HSI.dst100",
+      "HSI.dstoff",
+      "HSI.face",
+      "HSI.hdgbug",
+      "HSI.hdgknob",
+      "HSI.navbrg",
+      "Plane",
+      "fromflag",
+      "gs.needle",
+      "navflag",
+      "toflag",
+      "vitre"
+    ],
+    "bounds": [
+      [
+        -0.063685,
+        -0.056911,
+        -0.018835
+      ],
+      [
+        0.063685,
+        0.06758,
+        -0.000402
+      ]
+    ]
+  },
+  {
+    "mesh": "Interior\\Panel\\Instruments\\hydpress\\hydpress.ac",
+    "vertices": 208,
+    "triangles": 287,
+    "parts": [
+      "part",
+      "face",
+      "fond",
+      "needle",
+      "vitre"
+    ],
+    "bounds": [
+      [
+        -0.037903,
+        -0.037903,
+        -0.0025
+      ],
+      [
+        0.037903,
+        0.037903,
+        0.0025
+      ]
+    ]
+  },
+  {
+    "mesh": "Interior\\Panel\\Instruments\\oilpress\\oilpress.ac",
+    "vertices": 213,
+    "triangles": 309,
+    "parts": [
+      "part",
+      "face",
+      "fond",
+      "needle",
+      "vitre"
+    ],
+    "bounds": [
+      [
+        -0.026052,
+        -0.025765,
+        -0.002349
+      ],
+      [
+        0.026052,
+        0.025765,
+        0.002349
+      ]
+    ]
+  },
+  {
+    "mesh": "Interior\\Panel\\Instruments\\rmi\\rmi.ac",
+    "vertices": 462,
+    "triangles": 736,
+    "parts": [
+      "part",
+      "RMI.Needle1",
+      "RMI.Needle2",
+      "face",
+      "fond",
+      "vitre"
+    ],
+    "bounds": [
+      [
+        -0.054398,
+        -0.053741,
+        -0.021914999999999997
+      ],
+      [
+        0.054398,
+        0.053741,
+        -0.003365999999999999
+      ]
+    ]
+  },
+  {
+    "mesh": "Interior\\Panel\\Instruments\\switch\\selector.ac",
+    "vertices": 170,
+    "triangles": 296,
+    "parts": [
+      "part",
+      "selector"
+    ],
+    "bounds": [
+      [
+        -0.010224,
+        -0.010338,
+        -0.007978
+      ],
+      [
+        0.010224,
+        0.010383,
+        -0.0
+      ]
+    ]
+  },
+  {
+    "mesh": "Interior\\Panel\\Instruments\\switch\\switch.ac",
+    "vertices": 895,
+    "triangles": 1664,
+    "parts": [
+      "part",
+      "base",
+      "switch"
+    ],
+    "bounds": [
+      [
+        -0.006613,
+        -0.006614,
+        -0.014035
+      ],
+      [
+        0.006639,
+        0.006638,
+        0.00301
+      ]
+    ]
+  },
+  {
+    "mesh": "Interior\\Panel\\Instruments\\tac\\tac.ac",
+    "vertices": 326,
+    "triangles": 484,
+    "parts": [
+      "part",
+      "face",
+      "fond",
+      "needle",
+      "needle2",
+      "vitre"
+    ],
+    "bounds": [
+      [
+        -0.0379,
+        -0.038044,
+        -0.00362
+      ],
+      [
+        0.0379,
+        0.038045,
+        0.00362
+      ]
+    ]
+  },
+  {
+    "mesh": "Interior\\Panel\\Instruments\\turn\\turn.ac",
+    "vertices": 629,
+    "triangles": 1007,
+    "parts": [
+      "part",
+      "background",
+      "ball",
+      "face",
+      "fond",
+      "needle",
+      "vitre"
+    ],
+    "bounds": [
+      [
+        -0.043683,
+        -0.043155,
+        -0.018082
+      ],
+      [
+        0.043683,
+        0.043155,
+        -0.0029570000000000004
+      ]
+    ]
+  },
+  {
+    "mesh": "Interior\\Panel\\Instruments\\voltmeter\\voltmeter.ac",
+    "vertices": 274,
+    "triangles": 347,
+    "parts": [
+      "part",
+      "bezel",
+      "cover",
+      "face",
+      "needle",
+      "vitre"
+    ],
+    "bounds": [
+      [
+        -0.025288,
+        -0.024893,
+        -0.004095
+      ],
+      [
+        0.025121,
+        0.025336,
+        0.000652
+      ]
+    ]
+  },
+  {
+    "mesh": "Interior\\Panel\\Instruments\\vor\\vor.ac",
+    "vertices": 601,
+    "triangles": 894,
+    "parts": [
+      "part",
+      "VOR.FR",
+      "VOR.GlidescopeNeedle",
+      "VOR.LocalizerNeedle",
+      "VOR.NAV",
+      "VOR.TO",
+      "VOR.face",
+      "VOR.fond",
+      "VOR.knob",
+      "VOR.ring",
+      "vitre"
+    ],
+    "bounds": [
+      [
+        -0.059355,
+        -0.058638,
+        -0.020079
+      ],
+      [
+        0.059355,
+        0.058638,
+        0.00015999999999999868
+      ]
+    ]
+  },
+  {
+    "mesh": "Interior\\Panel\\Instruments\\vsi\\vsi.ac",
+    "vertices": 536,
+    "triangles": 850,
+    "parts": [
+      "part",
+      "VSIface",
+      "VSIgauge",
+      "VSIneedle",
+      "vitre"
+    ],
+    "bounds": [
+      [
+        -0.036265,
+        -0.035827,
+        -0.007124
+      ],
+      [
+        0.036265,
+        0.035827,
+        0.005242
+      ]
+    ]
+  },
+  {
+    "mesh": "Interior\\Panel\\Instruments\\warning\\warning.ac",
+    "vertices": 588,
+    "triangles": 966,
+    "parts": [
+      "part",
+      "fond",
+      "warn01",
+      "warn02",
+      "warn03",
+      "warn04",
+      "warn05",
+      "warn06",
+      "warn07",
+      "warn08",
+      "warn09",
+      "warn10",
+      "warn11",
+      "warn12",
+      "warn13",
+      "warn14",
+      "warn15",
+      "warn16",
+      "warn17",
+      "warn18",
+      "warn19",
+      "warn20"
+    ],
+    "bounds": [
+      [
+        -0.030395,
+        -0.05002,
+        -0.001933
+      ],
+      [
+        0.030395,
+        0.05002,
+        0.002267
+      ]
+    ]
+  },
+  {
+    "mesh": "Interior\\Panel\\Instruments\\yokes\\yoke.ac",
+    "vertices": 1030,
+    "triangles": 2006,
+    "parts": [
+      "part",
+      "base",
+      "chapeau",
+      "yoke"
+    ],
+    "bounds": [
+      [
+        -0.050526,
+        0.0,
+        -0.050526
+      ],
+      [
+        0.050526,
+        0.42007,
+        0.050526
+      ]
+    ]
+  },
+  {
+    "mesh": "Interior\\Panel\\panel.ac",
+    "vertices": 345,
+    "triangles": 485,
+    "parts": [
+      "part",
+      "panel"
+    ],
+    "bounds": [
+      [
+        -0.676514,
+        -0.25427,
+        -0.0
+      ],
+      [
+        0.67842,
+        0.160139,
+        0.54095
+      ]
+    ]
+  },
+  {
+    "mesh": "Interior\\Panel\\Pedestal\\pedestal.ac",
+    "vertices": 675,
+    "triangles": 1032,
+    "parts": [
+      "part",
+      "fentes",
+      "levelerflaps",
+      "levelerthrottleL",
+      "levelerthrottleR",
+      "pedestal"
+    ],
+    "bounds": [
+      [
+        -0.336476,
+        -0.267672,
+        -0.883596
+      ],
+      [
+        0.667737,
+        0.06532,
+        0.140831
+      ]
+    ]
+  },
+  {
+    "mesh": "Interior\\seats\\seat.ac",
+    "vertices": 135,
+    "triangles": 256,
+    "parts": [
+      "part",
+      "seat"
+    ],
+    "bounds": [
+      [
+        -0.210819,
+        -0.434352,
+        -0.236271
+      ],
+      [
+        0.210819,
+        0.434352,
+        0.236271
+      ]
+    ]
+  },
+  {
+    "mesh": "Pilot\\fighter_default.ac",
+    "vertices": 1938,
+    "triangles": 3576,
+    "parts": [
+      "part",
+      "avantbras",
+      "bras",
+      "corps",
+      "lunettes",
+      "main",
+      "tete"
+    ],
+    "bounds": [
+      [
+        -0.302056,
+        -0.341844,
+        -0.191369
+      ],
+      [
+        0.276432,
+        0.631726,
+        0.466672
+      ]
+    ]
+  },
+  {
+    "mesh": "Pilot\\pilot.ac",
+    "vertices": 6773,
+    "triangles": 12721,
+    "parts": [
+      "part",
+      "EA-6B.ac_L-Pilot_L-li.002"
+    ],
+    "bounds": [
+      [
+        0.05025999999999997,
+        -0.323064,
+        5.52951
+      ],
+      [
+        0.594957,
+        0.978404,
+        7.089131
+      ]
+    ]
+  }
+]

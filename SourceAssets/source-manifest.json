@@ -1,0 +1,1785 @@
+{
+  "source": "https://svn.code.sf.net/p/flightgear/fgaddon/!svn/rvr/21797/trunk/Aircraft/Cessna-A37-Dragonfly/",
+  "revision": 21797,
+  "file_count": 355,
+  "uncompressed_bytes": 39781534,
+  "archive_bytes": 29475197,
+  "archive_sha256": "7341f07d1e658fa034a6e42677b93cf54730f956b1c4bbf61ec6c673b1c5a5f9",
+  "files": [
+    {
+      "path": "AI/Aircraft/Cessna-A37-Dragonfly/Cessna-A37-Dragonfly-set.xml",
+      "bytes": 189,
+      "sha256": "bcef23c4f16ac5fe18ccd42a9443fb0d970a7e36b61a22621072285a8921188a"
+    },
+    {
+      "path": "AI/Aircraft/Cessna-A37-Dragonfly/Models/Cessna-A37-Dragonfly-bombableinclude.xml",
+      "bytes": 5673,
+      "sha256": "d22ed10146fb6d71e1436877805da7dd9feda0a7e50b58cea41d1b071d251499"
+    },
+    {
+      "path": "AI/Aircraft/Cessna-A37-Dragonfly/Models/Effects/Weapons/3d/Tank.ac",
+      "bytes": 146817,
+      "sha256": "cf94a396981ad0e52b75bdd1bee4de3807ef4ef4a48053669244fd8a735b2073"
+    },
+    {
+      "path": "AI/Aircraft/Cessna-A37-Dragonfly/Models/Effects/Weapons/3d/Tank.png",
+      "bytes": 23777,
+      "sha256": "587b54545b410c50b77cb6d1bd40190e010174ffc87887b80fc6fc84ca19acbd"
+    },
+    {
+      "path": "AI/Aircraft/Cessna-A37-Dragonfly/Models/Effects/Weapons/3d/Tank.xml",
+      "bytes": 178,
+      "sha256": "7951340bbafe3a99e9d634dc27a96779a54d317c1a58708f4650ed69d0580265"
+    },
+    {
+      "path": "AI/Aircraft/Cessna-A37-Dragonfly/Models/Effects/Weapons/3d/all-weapons.xml",
+      "bytes": 5914,
+      "sha256": "60f1074f4eee044e3b61026f093f76e43500b63ae164e038abb6051971aa0083"
+    },
+    {
+      "path": "AI/Aircraft/Cessna-A37-Dragonfly/Models/Effects/Weapons/3d/cbu24a.ac",
+      "bytes": 424554,
+      "sha256": "19cb5655b4fca94804db9d482bd1ddd6be23202afa4259dc0727d3084b5c299e"
+    },
+    {
+      "path": "AI/Aircraft/Cessna-A37-Dragonfly/Models/Effects/Weapons/3d/cbu24a.png",
+      "bytes": 77470,
+      "sha256": "1c1273b43fadbd68399c606d7402a1c654e8aa61d9fb300bdc92a5eceb153697"
+    },
+    {
+      "path": "AI/Aircraft/Cessna-A37-Dragonfly/Models/Effects/Weapons/3d/cbu24a.xml",
+      "bytes": 183,
+      "sha256": "3767f267779b8ad1c66be212a437be851cf45852c3fa1f016af4267e3854227b"
+    },
+    {
+      "path": "AI/Aircraft/Cessna-A37-Dragonfly/Models/Effects/Weapons/3d/sidewinder.ac",
+      "bytes": 352413,
+      "sha256": "5f028ae348a26756c70dc26c5c7876b4762430d9a159c51d770b7888f0c27a5f"
+    },
+    {
+      "path": "AI/Aircraft/Cessna-A37-Dragonfly/Models/Effects/Weapons/3d/sidewinder.png",
+      "bytes": 72123,
+      "sha256": "93f82a3778bb2aa8bf188bf4372118df3a0426759721d275a2782d57cc515302"
+    },
+    {
+      "path": "AI/Aircraft/Cessna-A37-Dragonfly/Models/Effects/Weapons/3d/sidewinder.xml",
+      "bytes": 385,
+      "sha256": "0251f7ee5358eeb866071a2da4f324971462a5fe6d60cc07b798e9d4f5279637"
+    },
+    {
+      "path": "AI/Aircraft/Cessna-A37-Dragonfly/Models/Effects/Weapons/3d/suu12.ac",
+      "bytes": 73345,
+      "sha256": "1fc40fca898c8df5a0be3f8e44b5411353b3fa23b83e56cb88d0ecdb39149c00"
+    },
+    {
+      "path": "AI/Aircraft/Cessna-A37-Dragonfly/Models/Effects/Weapons/3d/suu12.png",
+      "bytes": 106238,
+      "sha256": "ca38bf9a0cb5423faa4148d2c1cb09ea988d3f1edb9950131c77466464d90a8d"
+    },
+    {
+      "path": "AI/Aircraft/Cessna-A37-Dragonfly/Models/Effects/Weapons/3d/suu12.xml",
+      "bytes": 180,
+      "sha256": "98ff9137a4b220f70199280b3b9962fc3a8c2021dca15101394dc3ca1c7452b9"
+    },
+    {
+      "path": "AI/Aircraft/Cessna-A37-Dragonfly/Models/Effects/light/GreenLight.ac",
+      "bytes": 1641,
+      "sha256": "37ac0adfb78dda005820c7f47c7f4e8e97c668d0cf2d205b1fbde6ddde599cf5"
+    },
+    {
+      "path": "AI/Aircraft/Cessna-A37-Dragonfly/Models/Effects/light/GreenLight.xml",
+      "bytes": 847,
+      "sha256": "38f6814eca099d98f2b2d641d3a1532dc5dec9031643c20b21665a37d6604f22"
+    },
+    {
+      "path": "AI/Aircraft/Cessna-A37-Dragonfly/Models/Effects/light/RedLight.ac",
+      "bytes": 1641,
+      "sha256": "b2f021203ec64949ba13c00ca74a3c7b3a36b024c124b4bfcce060895da7ca04"
+    },
+    {
+      "path": "AI/Aircraft/Cessna-A37-Dragonfly/Models/Effects/light/RedLight.xml",
+      "bytes": 845,
+      "sha256": "56f2e12dee71850d1b7c0628839657e0de7ed57b2371b552713d9e68ce696852"
+    },
+    {
+      "path": "AI/Aircraft/Cessna-A37-Dragonfly/Models/Effects/light/StrobeLight.xml",
+      "bytes": 847,
+      "sha256": "8983a974154b8d13a1bafa20b06b16939187d64e99ab88a774839f1fe339a91d"
+    },
+    {
+      "path": "AI/Aircraft/Cessna-A37-Dragonfly/Models/Effects/light/WhiteLight.ac",
+      "bytes": 1538,
+      "sha256": "4fb0f6dee66e41b036a283720107824485b9b935ab172ecb291f1e4303b2a38a"
+    },
+    {
+      "path": "AI/Aircraft/Cessna-A37-Dragonfly/Models/Effects/light/all-lights.xml",
+      "bytes": 3560,
+      "sha256": "c5eac591df32ea6d0a1f52160a917209e3157be595bd14b75da94adb341da900"
+    },
+    {
+      "path": "AI/Aircraft/Cessna-A37-Dragonfly/Models/Effects/light/beacon.xml",
+      "bytes": 845,
+      "sha256": "56f2e12dee71850d1b7c0628839657e0de7ed57b2371b552713d9e68ce696852"
+    },
+    {
+      "path": "AI/Aircraft/Cessna-A37-Dragonfly/Models/Effects/light/empty.ac",
+      "bytes": 1099,
+      "sha256": "c7f1f507fb4e47510305b7fb60b992674ac399940b0c9d2a065bb586a8811cb1"
+    },
+    {
+      "path": "AI/Aircraft/Cessna-A37-Dragonfly/Models/Effects/light/empty.xml",
+      "bytes": 638,
+      "sha256": "b3257c405f1aeac9889864241e3a80a0fec44c76458df39842a539d538f8bec9"
+    },
+    {
+      "path": "AI/Aircraft/Cessna-A37-Dragonfly/Models/Effects/light/lights.png",
+      "bytes": 58803,
+      "sha256": "7cc623878de52aee3b5e2d3874770244b44d8a019b44c3ef99a61bde2525a44e"
+    },
+    {
+      "path": "AI/Aircraft/Cessna-A37-Dragonfly/Models/a37.ac",
+      "bytes": 2331869,
+      "sha256": "185fbb309c48311a0392945613ecccb4de5646d10df42d5343095faf703cb0ee"
+    },
+    {
+      "path": "AI/Aircraft/Cessna-A37-Dragonfly/Models/a37.xml",
+      "bytes": 1567,
+      "sha256": "ddab909bc5031ad652e94fa243d661dd91fd8118d77eafc78187b3675e0ea3f1"
+    },
+    {
+      "path": "AI/Aircraft/Cessna-A37-Dragonfly/Models/texture.png",
+      "bytes": 195639,
+      "sha256": "d039215266262169e3b4051c048bd32d44bf787c6f54423b03fd7ee85f03e3dc"
+    },
+    {
+      "path": "AI/Aircraft/add-in-fallback_models.xml",
+      "bytes": 88,
+      "sha256": "9d5f38b22cf0926b4591741e7b869881145701c819c2e11e017be4e70e68acc4"
+    },
+    {
+      "path": "COPYING",
+      "bytes": 18007,
+      "sha256": "dcc100d4161cc0b7177545ab6e47216f84857cda3843847c792a25289852dcaa"
+    },
+    {
+      "path": "Dialogs/a37-menu.xml",
+      "bytes": 8660,
+      "sha256": "63f7cc93a59bfeb0a40d76a173032a52096135c44da702cb4ef626a6608bffea"
+    },
+    {
+      "path": "Dialogs/config.xml",
+      "bytes": 14892,
+      "sha256": "1bb62584143aef88fde7b9c6f799846ad9a63cef71b1c87554bc29b678b95f7c"
+    },
+    {
+      "path": "Models/Cessna-A37-Dragonfly-bombableinclude.xml",
+      "bytes": 5673,
+      "sha256": "d22ed10146fb6d71e1436877805da7dd9feda0a7e50b58cea41d1b071d251499"
+    },
+    {
+      "path": "Models/Effects/Bump/bumpspec.eff",
+      "bytes": 3066,
+      "sha256": "222210633b87478026cad77cd5e67de373d5b922eae2b6736e195fc15e5e9692"
+    },
+    {
+      "path": "Models/Effects/Bump/normalmap.png",
+      "bytes": 59089,
+      "sha256": "765bfc23485cb8563b1a1ec3a5e4a4283131e1954b9b7afad113807090285b91"
+    },
+    {
+      "path": "Models/Effects/Glass/glass.eff",
+      "bytes": 1772,
+      "sha256": "b12d4ae232c443d3d43d515938201bc11b236f9cf88d3b19e872c15867e1fb39"
+    },
+    {
+      "path": "Models/Effects/Glass/glassrain.eff",
+      "bytes": 17422,
+      "sha256": "67b1b754434ecdb8924f0e1b8cab6ab0a5ea813798e46ee85292a80adff22492"
+    },
+    {
+      "path": "Models/Effects/Weapons/3d/Tank.ac",
+      "bytes": 146817,
+      "sha256": "cf94a396981ad0e52b75bdd1bee4de3807ef4ef4a48053669244fd8a735b2073"
+    },
+    {
+      "path": "Models/Effects/Weapons/3d/Tank.png",
+      "bytes": 23777,
+      "sha256": "36fb1b565cb0116de9d4c4883b903174aba3e4fb041374843f794d391d0107c7"
+    },
+    {
+      "path": "Models/Effects/Weapons/3d/Tank.xml",
+      "bytes": 178,
+      "sha256": "7951340bbafe3a99e9d634dc27a96779a54d317c1a58708f4650ed69d0580265"
+    },
+    {
+      "path": "Models/Effects/Weapons/3d/all-weapons.xml",
+      "bytes": 5730,
+      "sha256": "02fbc5164330731e20487a190a95b40cb69fe1683644d6cab96596684d074260"
+    },
+    {
+      "path": "Models/Effects/Weapons/3d/cbu24a.ac",
+      "bytes": 424554,
+      "sha256": "19cb5655b4fca94804db9d482bd1ddd6be23202afa4259dc0727d3084b5c299e"
+    },
+    {
+      "path": "Models/Effects/Weapons/3d/cbu24a.png",
+      "bytes": 77470,
+      "sha256": "aaef0d3d9a4fc7bf46a9b39499c286ce95dd6b3ae0e538c60f389563239783c4"
+    },
+    {
+      "path": "Models/Effects/Weapons/3d/cbu24a.xml",
+      "bytes": 183,
+      "sha256": "3767f267779b8ad1c66be212a437be851cf45852c3fa1f016af4267e3854227b"
+    },
+    {
+      "path": "Models/Effects/Weapons/3d/sidewinder.ac",
+      "bytes": 352413,
+      "sha256": "5f028ae348a26756c70dc26c5c7876b4762430d9a159c51d770b7888f0c27a5f"
+    },
+    {
+      "path": "Models/Effects/Weapons/3d/sidewinder.png",
+      "bytes": 72123,
+      "sha256": "a883ff4349c4e19a2374130365fd8b1bbb17f2db4024d7949e8908e1447ae734"
+    },
+    {
+      "path": "Models/Effects/Weapons/3d/sidewinder.xml",
+      "bytes": 385,
+      "sha256": "0251f7ee5358eeb866071a2da4f324971462a5fe6d60cc07b798e9d4f5279637"
+    },
+    {
+      "path": "Models/Effects/Weapons/3d/suu12.ac",
+      "bytes": 73345,
+      "sha256": "1fc40fca898c8df5a0be3f8e44b5411353b3fa23b83e56cb88d0ecdb39149c00"
+    },
+    {
+      "path": "Models/Effects/Weapons/3d/suu12.png",
+      "bytes": 106238,
+      "sha256": "f8eab92822b977a9df77221d52c43aaaf4768e5217f696326a24db2016242af6"
+    },
+    {
+      "path": "Models/Effects/Weapons/3d/suu12.xml",
+      "bytes": 180,
+      "sha256": "98ff9137a4b220f70199280b3b9962fc3a8c2021dca15101394dc3ca1c7452b9"
+    },
+    {
+      "path": "Models/Effects/Weapons/guns/12mm/ExplosionFire.xml",
+      "bytes": 2047,
+      "sha256": "13a0967cee59d970745cbbec1808884097cb94adabb2880970693ad88ca0b152"
+    },
+    {
+      "path": "Models/Effects/Weapons/guns/12mm/ExplosionSmoke.xml",
+      "bytes": 2012,
+      "sha256": "f13ee3e84938f80b2c220b6e430e7df32ad7d5ca5fe87f995a5e4a7033540bb6"
+    },
+    {
+      "path": "Models/Effects/Weapons/guns/12mm/apibullet-smoke.xml",
+      "bytes": 2007,
+      "sha256": "1d25402ea733d7334c3c8b1f0ce44d6600f1ec99bde64f15628417e403b1b6c2"
+    },
+    {
+      "path": "Models/Effects/Weapons/guns/12mm/apibullet-tracer.ac",
+      "bytes": 657,
+      "sha256": "667b63df3d6f3fe7b4170ab69ca34eee98cb19ad4538d2b48ceefa844ee7cee9"
+    },
+    {
+      "path": "Models/Effects/Weapons/guns/12mm/apibullet-tracer.png",
+      "bytes": 158,
+      "sha256": "8eeeae6858fe9582e3ad276ab390fd21d101d8c758d8ce600494c1ac227debdd"
+    },
+    {
+      "path": "Models/Effects/Weapons/guns/12mm/apibullet-tracer.xml",
+      "bytes": 1177,
+      "sha256": "674e7938f5b35cdfbbd8f747f2fa55dedc8bcee2c6c311a84c809ff6bc504f99"
+    },
+    {
+      "path": "Models/Effects/Weapons/guns/12mm/bullet-submodel.xml",
+      "bytes": 636,
+      "sha256": "4625263c3e71253e722f4a0fdc9803d64f9f3f2bc5a19e800879f3002d44e539"
+    },
+    {
+      "path": "Models/Effects/Weapons/guns/12mm/explosion.xml",
+      "bytes": 309,
+      "sha256": "e5c6de04d5eea66ef28f96929a28a54d7e4c28ef11629524226db2b6a847cce0"
+    },
+    {
+      "path": "Models/Effects/Weapons/guns/12mm/guns-sound.xml",
+      "bytes": 535,
+      "sha256": "39db3d9403b1af57f82f2aa662831a9e56410930adbe316eedb406704396fb98"
+    },
+    {
+      "path": "Models/Effects/Weapons/guns/12mm/impact-gun.wav",
+      "bytes": 19252,
+      "sha256": "b1d02b6f3184f2108c8cf30b7eaa13466d2873702e80dc82afa43c570045435f"
+    },
+    {
+      "path": "Models/Effects/Weapons/guns/12mm/smoke.png",
+      "bytes": 1254,
+      "sha256": "fb1ab2d2150fc27fd9c1c1c700b1c167815f336bcdad873c2d3eb0a91dfdc979"
+    },
+    {
+      "path": "Models/Effects/Weapons/guns/all-fires.xml",
+      "bytes": 2474,
+      "sha256": "220f47602f1e0fd7222c3e3270daaf3c95bb7a8bcebe36795a8c9858c3428884"
+    },
+    {
+      "path": "Models/Effects/Weapons/guns/fire.xml",
+      "bytes": 401,
+      "sha256": "ec56401e06b250ada6678bbcf73c60e0262bbc0e089868394b8c1bdc36f062d5"
+    },
+    {
+      "path": "Models/Effects/Weapons/guns/gunblaze.eff",
+      "bytes": 1113,
+      "sha256": "0d4febd63ff7f4b93945d26f9ef9407fdbd66a9233f6cb3bd1b96b73690b6553"
+    },
+    {
+      "path": "Models/Effects/Weapons/guns/noise.frag",
+      "bytes": 10470,
+      "sha256": "922280e3fda7fa1d4f03e234aba9c54774e17ad775b1b040b18ca59d157d68ec"
+    },
+    {
+      "path": "Models/Effects/Weapons/guns/thrust-flame.eff",
+      "bytes": 7624,
+      "sha256": "a54016db63b07212e98de1714894612303adaf486b6c37bd55d393c8952591bd"
+    },
+    {
+      "path": "Models/Effects/Weapons/guns/thrust_flame.ac",
+      "bytes": 669,
+      "sha256": "d2e24daf82e030286cf899c9068c0bfa81d6c37f2cbc9070a6ca212e70dd2ed5"
+    },
+    {
+      "path": "Models/Effects/Weapons/guns/thrustflame-ALS.frag",
+      "bytes": 3408,
+      "sha256": "f4f54406cdc8865897cd9e5a90fa496ffc85c7e66aca864a5fe5bd4275b45da0"
+    },
+    {
+      "path": "Models/Effects/Weapons/guns/thrustflame-ALS.vert",
+      "bytes": 385,
+      "sha256": "f7fffccacdf82d81de5db6a1f6b9023484a0fe69e439dbeda3fd0e7ea1e0773e"
+    },
+    {
+      "path": "Models/Effects/Weapons/release.xml",
+      "bytes": 6709,
+      "sha256": "39d2e37c1295c01ff3861c9b68f2d21a7d2616d301220a39734860217374982a"
+    },
+    {
+      "path": "Models/Effects/flames/ALS/bruleurL.xml",
+      "bytes": 1009,
+      "sha256": "2d7941f3cabc8c74e4d5723d0c286617788cd76b803f0df1748a3e60a6d14680"
+    },
+    {
+      "path": "Models/Effects/flames/ALS/bruleurR.xml",
+      "bytes": 1009,
+      "sha256": "ebd9b29c9787ee7c7f238eb4e5875df511dc5969e9f28cca384cb1de0e5ebba6"
+    },
+    {
+      "path": "Models/Effects/flames/ALS/combustion_Day.xml",
+      "bytes": 480,
+      "sha256": "637438cbc1ad7f7495d99fe99428eb398bc5bd668a0533cf320b92fc2c146189"
+    },
+    {
+      "path": "Models/Effects/flames/ALS/combustion_Dusk.xml",
+      "bytes": 430,
+      "sha256": "4d9ad0ae6c4481b25263db18304d80a96e6a4eec576686e025b8c3ae4cb413c3"
+    },
+    {
+      "path": "Models/Effects/flames/ALS/combustion_Night.xml",
+      "bytes": 431,
+      "sha256": "6addfe83b31f26a04a6c09f8a494c87db4b123f9d7b7fc424495aeec7e60317c"
+    },
+    {
+      "path": "Models/Effects/flames/ALS/flame.ac",
+      "bytes": 7955,
+      "sha256": "1aa4bcad68bd633806acc0875bd80d1d5027456def7a62e6f201e6fc63348a35"
+    },
+    {
+      "path": "Models/Effects/flames/ALS/flame.png",
+      "bytes": 177278,
+      "sha256": "250c79ccb63509cb0987ff9649a3a6a461ee9168419f1e9c1827999ca9a3da7c"
+    },
+    {
+      "path": "Models/Effects/flames/ALS/flameL.xml",
+      "bytes": 3414,
+      "sha256": "2ced29a350a61519d5798039f1f079a2fe3e328c2f750408b04dcfb8bb42eb22"
+    },
+    {
+      "path": "Models/Effects/flames/ALS/flameR.xml",
+      "bytes": 3414,
+      "sha256": "146df5417c62b290e07a0c8ae57613c3cbc1cc588e7f8fbfb70b281c73337756"
+    },
+    {
+      "path": "Models/Effects/flames/ALS/flame_Day.eff",
+      "bytes": 1360,
+      "sha256": "cab12c5712a3f96ccfe8ada7e6422b559741d0f78b2946d9130af132d60c7e79"
+    },
+    {
+      "path": "Models/Effects/flames/ALS/flame_Dusk.eff",
+      "bytes": 1355,
+      "sha256": "3ff6aee11a309aa534f3fd60d34b4f482da5ccfb1bc32f1ec1e2dab8c64ddab0"
+    },
+    {
+      "path": "Models/Effects/flames/ALS/flame_Night.eff",
+      "bytes": 1173,
+      "sha256": "f00a44070c533872e65f81e7525c15fe4d9529df6f7a0d6dc1366bfb62c37d91"
+    },
+    {
+      "path": "Models/Effects/flames/ALS/gunblaze.eff",
+      "bytes": 1120,
+      "sha256": "92a0b1acf4cdee783ff5ae12c50f4e89cb28a7d252d6a9a3d2a7b18620f8c91f"
+    },
+    {
+      "path": "Models/Effects/flames/ALS/thrust-flame.eff",
+      "bytes": 7656,
+      "sha256": "cbfbf466ce36a1423505792deb9c1ae12e8848219c594b40a92c7c2402e42738"
+    },
+    {
+      "path": "Models/Effects/flames/ALS/thrust_flame.ac",
+      "bytes": 10142,
+      "sha256": "d835c03a6282db0715df40ddc266cdc682ab3053e0aadbd2c14228072c73a5f3"
+    },
+    {
+      "path": "Models/Effects/flames/ALS/thrustflame-ALS.frag",
+      "bytes": 3383,
+      "sha256": "8690fa2e887590f2d38735437847591e9074a1e8f90c3019b7f537522b8968fb"
+    },
+    {
+      "path": "Models/Effects/flames/ALS/thrustflame-ALS.vert",
+      "bytes": 384,
+      "sha256": "d9b9083a853f76ebef61874dd25d34be860d16ed1b21c315d412751ed9fb997a"
+    },
+    {
+      "path": "Models/Effects/flames/Classic/combustion.ac",
+      "bytes": 74498,
+      "sha256": "9de461b6199f1854d2aa26744606e839ec4b2fc6eb5b379529d40f5f9b23f9b7"
+    },
+    {
+      "path": "Models/Effects/flames/Classic/combustionL.xml",
+      "bytes": 7559,
+      "sha256": "7110c1279fdde0dab5f9182dbe59bfe18f62cbe3f7c18f8b2e25e594df24a873"
+    },
+    {
+      "path": "Models/Effects/flames/Classic/combustionR.xml",
+      "bytes": 7559,
+      "sha256": "ec8b21a508d6022169715f5a0ff7db55b4f83e2c78a01bf9336f26bc29662f9a"
+    },
+    {
+      "path": "Models/Effects/flames/Classic/flame.ac",
+      "bytes": 7955,
+      "sha256": "1aa4bcad68bd633806acc0875bd80d1d5027456def7a62e6f201e6fc63348a35"
+    },
+    {
+      "path": "Models/Effects/flames/Classic/flame.png",
+      "bytes": 177278,
+      "sha256": "250c79ccb63509cb0987ff9649a3a6a461ee9168419f1e9c1827999ca9a3da7c"
+    },
+    {
+      "path": "Models/Effects/flames/Classic/flameL.xml",
+      "bytes": 1178,
+      "sha256": "bb34e3865b43f81e3914e6d2ade44c879c1558f701d54a5fb42c0995c24548bb"
+    },
+    {
+      "path": "Models/Effects/flames/Classic/flameR.xml",
+      "bytes": 1178,
+      "sha256": "94386ffa5da61234b8bcfcb9bd70788ed3fba6f7193247d5db8d00048d4c21ea"
+    },
+    {
+      "path": "Models/Effects/flames/Classic/transparent.png",
+      "bytes": 9842,
+      "sha256": "af458200f3a8e0278cd1727be98981d161e3e2ea07b5e92db84436b259287871"
+    },
+    {
+      "path": "Models/Effects/flames/HDR/combustion.ac",
+      "bytes": 74498,
+      "sha256": "9de461b6199f1854d2aa26744606e839ec4b2fc6eb5b379529d40f5f9b23f9b7"
+    },
+    {
+      "path": "Models/Effects/flames/HDR/combustionL.xml",
+      "bytes": 7559,
+      "sha256": "7110c1279fdde0dab5f9182dbe59bfe18f62cbe3f7c18f8b2e25e594df24a873"
+    },
+    {
+      "path": "Models/Effects/flames/HDR/combustionR.xml",
+      "bytes": 7559,
+      "sha256": "ec8b21a508d6022169715f5a0ff7db55b4f83e2c78a01bf9336f26bc29662f9a"
+    },
+    {
+      "path": "Models/Effects/flames/HDR/flame.ac",
+      "bytes": 7955,
+      "sha256": "1aa4bcad68bd633806acc0875bd80d1d5027456def7a62e6f201e6fc63348a35"
+    },
+    {
+      "path": "Models/Effects/flames/HDR/flame.png",
+      "bytes": 177278,
+      "sha256": "250c79ccb63509cb0987ff9649a3a6a461ee9168419f1e9c1827999ca9a3da7c"
+    },
+    {
+      "path": "Models/Effects/flames/HDR/flameL.xml",
+      "bytes": 1178,
+      "sha256": "bb34e3865b43f81e3914e6d2ade44c879c1558f701d54a5fb42c0995c24548bb"
+    },
+    {
+      "path": "Models/Effects/flames/HDR/flameR.xml",
+      "bytes": 1178,
+      "sha256": "94386ffa5da61234b8bcfcb9bd70788ed3fba6f7193247d5db8d00048d4c21ea"
+    },
+    {
+      "path": "Models/Effects/flames/HDR/transparent.png",
+      "bytes": 9842,
+      "sha256": "af458200f3a8e0278cd1727be98981d161e3e2ea07b5e92db84436b259287871"
+    },
+    {
+      "path": "Models/Effects/flames/all-flames.xml",
+      "bytes": 1297,
+      "sha256": "f4163ef592bf2776cb1c9a992892ce866e31b4602d67c3fe5857ac78c60cffd6"
+    },
+    {
+      "path": "Models/Effects/flames/flameL.xml",
+      "bytes": 941,
+      "sha256": "bc9abbe23ce9a727856385a6f8407fc5a7fb29561192feb85804cf2a8877a188"
+    },
+    {
+      "path": "Models/Effects/flames/flameR.xml",
+      "bytes": 941,
+      "sha256": "b582b487278caab22a5a06bda46bbf9d65662ad646c061dd57bf5e12f5a86309"
+    },
+    {
+      "path": "Models/Effects/ground/ALS/ground0.xml",
+      "bytes": 2326,
+      "sha256": "6c27635aa092ebf85a642bdb6e6cdbf684bdf6b5a70ed1e62d77be47a08f8973"
+    },
+    {
+      "path": "Models/Effects/ground/ALS/ground1.xml",
+      "bytes": 2326,
+      "sha256": "8783bed667cf605ed5b447a0a61dbbc9b905b056d005f71b24af2b7f1c7d79a4"
+    },
+    {
+      "path": "Models/Effects/ground/ALS/ground2.xml",
+      "bytes": 2326,
+      "sha256": "892fb6a9bff4642d64eccc582caa30c78a016e0211692c17fb53cb7c6e670a4a"
+    },
+    {
+      "path": "Models/Effects/ground/ALS/smoke.png",
+      "bytes": 6482,
+      "sha256": "8891890e609058a1fc4cd1a8c8c46e5c89bd20d14293b375823d8c117f56de6f"
+    },
+    {
+      "path": "Models/Effects/ground/Classic/ground0.xml",
+      "bytes": 2326,
+      "sha256": "6c27635aa092ebf85a642bdb6e6cdbf684bdf6b5a70ed1e62d77be47a08f8973"
+    },
+    {
+      "path": "Models/Effects/ground/Classic/ground1.xml",
+      "bytes": 2326,
+      "sha256": "8783bed667cf605ed5b447a0a61dbbc9b905b056d005f71b24af2b7f1c7d79a4"
+    },
+    {
+      "path": "Models/Effects/ground/Classic/ground2.xml",
+      "bytes": 2326,
+      "sha256": "892fb6a9bff4642d64eccc582caa30c78a016e0211692c17fb53cb7c6e670a4a"
+    },
+    {
+      "path": "Models/Effects/ground/Classic/smoke.png",
+      "bytes": 6482,
+      "sha256": "8891890e609058a1fc4cd1a8c8c46e5c89bd20d14293b375823d8c117f56de6f"
+    },
+    {
+      "path": "Models/Effects/ground/HDR/ground0.xml",
+      "bytes": 2326,
+      "sha256": "6c27635aa092ebf85a642bdb6e6cdbf684bdf6b5a70ed1e62d77be47a08f8973"
+    },
+    {
+      "path": "Models/Effects/ground/HDR/ground1.xml",
+      "bytes": 2326,
+      "sha256": "8783bed667cf605ed5b447a0a61dbbc9b905b056d005f71b24af2b7f1c7d79a4"
+    },
+    {
+      "path": "Models/Effects/ground/HDR/ground2.xml",
+      "bytes": 2326,
+      "sha256": "892fb6a9bff4642d64eccc582caa30c78a016e0211692c17fb53cb7c6e670a4a"
+    },
+    {
+      "path": "Models/Effects/ground/HDR/smoke.png",
+      "bytes": 6482,
+      "sha256": "8891890e609058a1fc4cd1a8c8c46e5c89bd20d14293b375823d8c117f56de6f"
+    },
+    {
+      "path": "Models/Effects/ground/all-ground.xml",
+      "bytes": 619,
+      "sha256": "c5a55c928ee209031b1079a5d80c8130167a5c26c785c308aa825d8107126a4d"
+    },
+    {
+      "path": "Models/Effects/ground/ground0.xml",
+      "bytes": 950,
+      "sha256": "1e9edd03588a0574cfff4e358039f093fc7a9407c52944a0c33d68d8a72ee618"
+    },
+    {
+      "path": "Models/Effects/ground/ground1.xml",
+      "bytes": 950,
+      "sha256": "3f386daa18f4f306067197734732bc99fcb18f77ae7e747720862ff30b6c80dc"
+    },
+    {
+      "path": "Models/Effects/ground/ground2.xml",
+      "bytes": 950,
+      "sha256": "c2990ea0d1e2fc0f303a4098b315b0cc71720a6b9c3f289fd6a77a25899ec582"
+    },
+    {
+      "path": "Models/Effects/smoke/ALS/noise3.png",
+      "bytes": 30385,
+      "sha256": "05a1b16bb7b1cda2b59a9de2dc11614407ccf7f9e8e413c40f42f3deb002fa57"
+    },
+    {
+      "path": "Models/Effects/smoke/ALS/smokeL.xml",
+      "bytes": 2969,
+      "sha256": "5fb6087aae7b3b019bafefe54264388da596e3899c5e3b7b165252f1d33fef65"
+    },
+    {
+      "path": "Models/Effects/smoke/ALS/smokeR.xml",
+      "bytes": 2969,
+      "sha256": "d21feb6b0c601b9b97f0c9c72d3d96ee6d28c7f8ff796cc1283d6bdd08b73528"
+    },
+    {
+      "path": "Models/Effects/smoke/Classic/noise3.png",
+      "bytes": 30385,
+      "sha256": "05a1b16bb7b1cda2b59a9de2dc11614407ccf7f9e8e413c40f42f3deb002fa57"
+    },
+    {
+      "path": "Models/Effects/smoke/Classic/smokeL.xml",
+      "bytes": 2969,
+      "sha256": "5fb6087aae7b3b019bafefe54264388da596e3899c5e3b7b165252f1d33fef65"
+    },
+    {
+      "path": "Models/Effects/smoke/Classic/smokeR.xml",
+      "bytes": 2969,
+      "sha256": "d21feb6b0c601b9b97f0c9c72d3d96ee6d28c7f8ff796cc1283d6bdd08b73528"
+    },
+    {
+      "path": "Models/Effects/smoke/HDR/noise3.png",
+      "bytes": 30385,
+      "sha256": "05a1b16bb7b1cda2b59a9de2dc11614407ccf7f9e8e413c40f42f3deb002fa57"
+    },
+    {
+      "path": "Models/Effects/smoke/HDR/smokeL.xml",
+      "bytes": 2969,
+      "sha256": "5fb6087aae7b3b019bafefe54264388da596e3899c5e3b7b165252f1d33fef65"
+    },
+    {
+      "path": "Models/Effects/smoke/HDR/smokeR.xml",
+      "bytes": 2969,
+      "sha256": "d21feb6b0c601b9b97f0c9c72d3d96ee6d28c7f8ff796cc1283d6bdd08b73528"
+    },
+    {
+      "path": "Models/Effects/smoke/all-smokes.xml",
+      "bytes": 428,
+      "sha256": "faa12a24d393e165bd882e7b0a78c9f8679782c4996785f13f69e8acde5ca6e1"
+    },
+    {
+      "path": "Models/Effects/smoke/smokeL.xml",
+      "bytes": 941,
+      "sha256": "f9fa4ce5c3d82983103c7307d7ebf48191aebf25c501fd7025d6ff2289233a3d"
+    },
+    {
+      "path": "Models/Effects/smoke/smokeR.xml",
+      "bytes": 941,
+      "sha256": "135f8cd87e6af21a55ddfe266c824c27f6a1bedb8c437ad8ce4bc2bcb6a0e81f"
+    },
+    {
+      "path": "Models/Effects/tiptrail/ALS/continous_smoke.png",
+      "bytes": 11304,
+      "sha256": "0e01012c4b92d5e7884ec1dc484ba04645bad6d7d29e7f070b95a25e39a58c43"
+    },
+    {
+      "path": "Models/Effects/tiptrail/ALS/tiptrail.xml",
+      "bytes": 2050,
+      "sha256": "cdc2483a0a7b6d07b0ffec52162c79e618a666e588c1efc3a17bb6ca0a71d583"
+    },
+    {
+      "path": "Models/Effects/tiptrail/Classic/continous_smoke.png",
+      "bytes": 11304,
+      "sha256": "0e01012c4b92d5e7884ec1dc484ba04645bad6d7d29e7f070b95a25e39a58c43"
+    },
+    {
+      "path": "Models/Effects/tiptrail/Classic/tiptrail.xml",
+      "bytes": 2050,
+      "sha256": "cdc2483a0a7b6d07b0ffec52162c79e618a666e588c1efc3a17bb6ca0a71d583"
+    },
+    {
+      "path": "Models/Effects/tiptrail/HDR/continous_smoke.png",
+      "bytes": 11304,
+      "sha256": "0e01012c4b92d5e7884ec1dc484ba04645bad6d7d29e7f070b95a25e39a58c43"
+    },
+    {
+      "path": "Models/Effects/tiptrail/HDR/tiptrail.xml",
+      "bytes": 2050,
+      "sha256": "cdc2483a0a7b6d07b0ffec52162c79e618a666e588c1efc3a17bb6ca0a71d583"
+    },
+    {
+      "path": "Models/Effects/tiptrail/all-tiptrails.xml",
+      "bytes": 428,
+      "sha256": "f2fb5c2a436a5cbb01b51d296bc243ac011d0c94194feafd4d9fbb35a175bfb7"
+    },
+    {
+      "path": "Models/Effects/tiptrail/tiptrail.xml",
+      "bytes": 915,
+      "sha256": "377ca40e62359239db17f4e49e9b05286f999ea2dfdfdc218a31ddd15b24f505"
+    },
+    {
+      "path": "Models/Effects/trail/ALS/smoke.png",
+      "bytes": 6808,
+      "sha256": "8784cc8c20a006e67c62d5cbf68c6d246dfcb7dbadb55330e90d15b9cb4dd553"
+    },
+    {
+      "path": "Models/Effects/trail/ALS/trailL.xml",
+      "bytes": 2457,
+      "sha256": "0c8607c3726326765514dffc054d6a3643d33de269ec6409f86a17b8df4a7595"
+    },
+    {
+      "path": "Models/Effects/trail/ALS/trailR.xml",
+      "bytes": 2457,
+      "sha256": "b928de1afbb5d9b8033f4f15af823381c3aa2b0b8d49adc936039befdc82f051"
+    },
+    {
+      "path": "Models/Effects/trail/Classic/smoke.png",
+      "bytes": 6808,
+      "sha256": "8784cc8c20a006e67c62d5cbf68c6d246dfcb7dbadb55330e90d15b9cb4dd553"
+    },
+    {
+      "path": "Models/Effects/trail/Classic/trailL.xml",
+      "bytes": 2457,
+      "sha256": "0c8607c3726326765514dffc054d6a3643d33de269ec6409f86a17b8df4a7595"
+    },
+    {
+      "path": "Models/Effects/trail/Classic/trailR.xml",
+      "bytes": 2457,
+      "sha256": "b928de1afbb5d9b8033f4f15af823381c3aa2b0b8d49adc936039befdc82f051"
+    },
+    {
+      "path": "Models/Effects/trail/HDR/smoke.png",
+      "bytes": 6808,
+      "sha256": "8784cc8c20a006e67c62d5cbf68c6d246dfcb7dbadb55330e90d15b9cb4dd553"
+    },
+    {
+      "path": "Models/Effects/trail/HDR/trailL.xml",
+      "bytes": 2457,
+      "sha256": "0c8607c3726326765514dffc054d6a3643d33de269ec6409f86a17b8df4a7595"
+    },
+    {
+      "path": "Models/Effects/trail/HDR/trailR.xml",
+      "bytes": 2457,
+      "sha256": "b928de1afbb5d9b8033f4f15af823381c3aa2b0b8d49adc936039befdc82f051"
+    },
+    {
+      "path": "Models/Effects/trail/all-trails.xml",
+      "bytes": 428,
+      "sha256": "f7a74d13d9a23d546e378d4ca0f6506e6dd1ba227d4995963d4a26587b467eb4"
+    },
+    {
+      "path": "Models/Effects/trail/trailL.xml",
+      "bytes": 941,
+      "sha256": "ae8f04dacc1655a96961f697b8fc44b0410d1bbeda0a6ddd792ca028aebd3eee"
+    },
+    {
+      "path": "Models/Effects/trail/trailR.xml",
+      "bytes": 941,
+      "sha256": "39b68857371bb0f7b7c30d08539a75509ffe144073044eb23e2a6e2a082758c4"
+    },
+    {
+      "path": "Models/Interior/Panel/Instruments/FuelGauge/FuelGauge.ac",
+      "bytes": 39137,
+      "sha256": "82f00cc6d6e7fa1efdfc037bf7894c005a72ae183e384c346042be1d487b0388"
+    },
+    {
+      "path": "Models/Interior/Panel/Instruments/FuelGauge/FuelGauge.png",
+      "bytes": 73237,
+      "sha256": "0492a6293c77ddf5a6f603f3376b87730e66bab56de699ccede966af98df9ade"
+    },
+    {
+      "path": "Models/Interior/Panel/Instruments/FuelGauge/FuelGauge0.xml",
+      "bytes": 2195,
+      "sha256": "ec495058ae899a2ff49ae79b534b1084409af2ad7ca78cea01f090065bc362a5"
+    },
+    {
+      "path": "Models/Interior/Panel/Instruments/FuelGauge/FuelGauge1.xml",
+      "bytes": 2195,
+      "sha256": "bdb6a953a278f9e568187150a216c5c1ba2e27e9a7d5296519b69d72247972b6"
+    },
+    {
+      "path": "Models/Interior/Panel/Instruments/ai/ai.ac",
+      "bytes": 137402,
+      "sha256": "9dd1e20c7390e6a8a72cadc6029d72db9edb3eac33a954c2b03d5a6a0362868e"
+    },
+    {
+      "path": "Models/Interior/Panel/Instruments/ai/ai.png",
+      "bytes": 136112,
+      "sha256": "dcd535277dff01a0b5edeff4ea2ef3699e1642fdb0939908b052c1fbce1311a3"
+    },
+    {
+      "path": "Models/Interior/Panel/Instruments/ai/ai.xml",
+      "bytes": 4359,
+      "sha256": "8bd051f3c42b0536186947d0b9e802d23f17d1a894262347c633e062778155e3"
+    },
+    {
+      "path": "Models/Interior/Panel/Instruments/alt/alt.ac",
+      "bytes": 117159,
+      "sha256": "7ec6d4ecf19fd2493e882aa87d6f0dba985657132cf492f508f7665216f05d79"
+    },
+    {
+      "path": "Models/Interior/Panel/Instruments/alt/alt.png",
+      "bytes": 54480,
+      "sha256": "e2f066bfbd8f4eca75b28a480bcbb3fd015cb14af856828a36f9660273e77001"
+    },
+    {
+      "path": "Models/Interior/Panel/Instruments/alt/alt.xml",
+      "bytes": 4135,
+      "sha256": "bb47264d07ea175a05fcfd8ae9565f4cfed5411b08ca685acb1dc8d23813af35"
+    },
+    {
+      "path": "Models/Interior/Panel/Instruments/ammeter/ammeter.ac",
+      "bytes": 40925,
+      "sha256": "2f5a6fb363cee3a1933bdd5167b28b173f9dfd5aeb7f69cb2839741d6c59d2f5"
+    },
+    {
+      "path": "Models/Interior/Panel/Instruments/ammeter/ammeter.xml",
+      "bytes": 1639,
+      "sha256": "864c3d7dde248c3ac8d9f2837c12edbdac261a5771cfcf179c4eb4f5d583d91b"
+    },
+    {
+      "path": "Models/Interior/Panel/Instruments/ammeter/amps.png",
+      "bytes": 8411,
+      "sha256": "ea45378817fd26720d4e44015a2695f828e951c46caef4855f2c6fbb00f32b83"
+    },
+    {
+      "path": "Models/Interior/Panel/Instruments/asi/asi.ac",
+      "bytes": 106618,
+      "sha256": "e2e49b46379244fbb614dd09018ab417025bcb45a38115a1480c6f70e3116e98"
+    },
+    {
+      "path": "Models/Interior/Panel/Instruments/asi/asi.png",
+      "bytes": 34022,
+      "sha256": "c55cd9a9c02d5ac7ab1e26acca5b02e1ccf0e6c965460f347243fa715d714d9c"
+    },
+    {
+      "path": "Models/Interior/Panel/Instruments/asi/asi.xml",
+      "bytes": 2338,
+      "sha256": "0386c1785437c55cd0aaf3a40e3addaf73f062eb1145d151184d25cc34fc11ab"
+    },
+    {
+      "path": "Models/Interior/Panel/Instruments/clock/clock.ac",
+      "bytes": 56538,
+      "sha256": "9cd6f67f99bf850ec49c394ea9ac0c8812da08c83fe731002bc6056e0952ec6a"
+    },
+    {
+      "path": "Models/Interior/Panel/Instruments/clock/clock.png",
+      "bytes": 24032,
+      "sha256": "7eff41c5938ee7792046fa2af38ca2db749a4f5d2ae860628555ae2d6b2eced5"
+    },
+    {
+      "path": "Models/Interior/Panel/Instruments/clock/clock.xml",
+      "bytes": 2022,
+      "sha256": "1c8d7d0a2ff775ffd989c1062170ad9445bdcdc75b820b8abf29dcd8606013b2"
+    },
+    {
+      "path": "Models/Interior/Panel/Instruments/exhaust/exhaust.ac",
+      "bytes": 41450,
+      "sha256": "8f95f9e7622016586b4074cb2938dd9f86f1aebd498004ff3539fa65e92829f5"
+    },
+    {
+      "path": "Models/Interior/Panel/Instruments/exhaust/exhaust.png",
+      "bytes": 23107,
+      "sha256": "d8252ed8dbad8ec65f173008afb5bb68f4d733f09456b82924bfeae48e55a750"
+    },
+    {
+      "path": "Models/Interior/Panel/Instruments/exhaust/exhaust0.xml",
+      "bytes": 1942,
+      "sha256": "e4eec5615dc9bcfc4becee762fba9cd9ac784ea84d23cbfa6d180536d4d91ed2"
+    },
+    {
+      "path": "Models/Interior/Panel/Instruments/exhaust/exhaust1.xml",
+      "bytes": 1942,
+      "sha256": "5e3333171481ef84b29cdd5063c789b9393aace489970d1aa74394dc8f3f3bba"
+    },
+    {
+      "path": "Models/Interior/Panel/Instruments/fflow/fflow.ac",
+      "bytes": 32509,
+      "sha256": "24e3f7f86c61e8fd26e5b45d09d31071b0cedec9c56928fc1e2de092fdcc2f7e"
+    },
+    {
+      "path": "Models/Interior/Panel/Instruments/fflow/fflow.png",
+      "bytes": 64841,
+      "sha256": "b1bb1cb1ba0193fb3fb6bbdaa1c35fb9420e58c60c104af0785e2857999f09ae"
+    },
+    {
+      "path": "Models/Interior/Panel/Instruments/fflow/fflow0.xml",
+      "bytes": 1607,
+      "sha256": "287694575ac3788b3d752afe16f22c193bde23b0979a3cb1248d4f096e2055c7"
+    },
+    {
+      "path": "Models/Interior/Panel/Instruments/fflow/fflow1.xml",
+      "bytes": 1607,
+      "sha256": "1ba999c9fa3dde76a292a8a0358f9ffac113869c9b192fed24720bb0d93268af"
+    },
+    {
+      "path": "Models/Interior/Panel/Instruments/flaps/flaps.ac",
+      "bytes": 40327,
+      "sha256": "8bb36d8eabe95c93330d14b84fc315feb8c26f7041884ff58de58a9c94a9b354"
+    },
+    {
+      "path": "Models/Interior/Panel/Instruments/flaps/flaps.png",
+      "bytes": 59345,
+      "sha256": "5d28fd972af57d936dab775620629368d79fd2678de574be758c54cd3ee6583a"
+    },
+    {
+      "path": "Models/Interior/Panel/Instruments/flaps/flaps.xml",
+      "bytes": 1296,
+      "sha256": "e1154ad7836e9548d26b4a1f430180894633393841e1c1181003619b6f9e5572"
+    },
+    {
+      "path": "Models/Interior/Panel/Instruments/gears/gear.ac",
+      "bytes": 305855,
+      "sha256": "5e9b399be9ffeda594adbe441f039e67a9b6a5b74a4f29b33e648a61b0e9e2c6"
+    },
+    {
+      "path": "Models/Interior/Panel/Instruments/gears/gear.png",
+      "bytes": 430,
+      "sha256": "7977bfe0e780342e2f4b8aef9ff1a5a5bbca208c536844b1621cfca47a8d2592"
+    },
+    {
+      "path": "Models/Interior/Panel/Instruments/gears/gear.xml",
+      "bytes": 3559,
+      "sha256": "61949b8d9a23c8a95ed6b634ff2e96c70b935bae5759b06ba5f203b36b7d9ac2"
+    },
+    {
+      "path": "Models/Interior/Panel/Instruments/gmeter/gmeter.ac",
+      "bytes": 52380,
+      "sha256": "84f268157059b22d1f94b5257080a0ecdea9a1f56557c9fc9cffb0e264d6cbe2"
+    },
+    {
+      "path": "Models/Interior/Panel/Instruments/gmeter/gmeter.png",
+      "bytes": 46149,
+      "sha256": "a6aa9a5b38fb6f2fa4be42a1c91f3759b787eea9e081b3c157e603ec38f274f2"
+    },
+    {
+      "path": "Models/Interior/Panel/Instruments/gmeter/gmeter.xml",
+      "bytes": 3579,
+      "sha256": "d4cb7d449b39a219e9df1bf21a81377dbc75a5a690f34d19b66344f6c394dc72"
+    },
+    {
+      "path": "Models/Interior/Panel/Instruments/hsi/hsi.ac",
+      "bytes": 62533,
+      "sha256": "3a80d2f679dd209107509e705c81431503a0284afa7b8698ab9b598ec799a023"
+    },
+    {
+      "path": "Models/Interior/Panel/Instruments/hsi/hsi.png",
+      "bytes": 78037,
+      "sha256": "8321ed5ec3ef657a3ab661f7f946fed90e0ee900606ac0b0686dbc8eabb87ecd"
+    },
+    {
+      "path": "Models/Interior/Panel/Instruments/hsi/hsi.xml",
+      "bytes": 11406,
+      "sha256": "77fcba7b0b0afce888fcf52af6ed1a44fab713feb1bfbccb1c973927d116880c"
+    },
+    {
+      "path": "Models/Interior/Panel/Instruments/hydpress/hydpress.ac",
+      "bytes": 29955,
+      "sha256": "0882551a6973632bb3f271e119a2810ad61c4dcc53ec4897fe41ed9a6f861d54"
+    },
+    {
+      "path": "Models/Interior/Panel/Instruments/hydpress/hydpress.png",
+      "bytes": 22665,
+      "sha256": "42ec3768233a2b3a5bddbc6ed0bf438f42c987806ed928ab21d151dfe6c1b287"
+    },
+    {
+      "path": "Models/Interior/Panel/Instruments/hydpress/hydpress.xml",
+      "bytes": 1424,
+      "sha256": "1f0e2dfac90e2c84f95197b4f1d5094f02fc3299efd5fb01fb9bb17d10322845"
+    },
+    {
+      "path": "Models/Interior/Panel/Instruments/oilpress/oilpress.ac",
+      "bytes": 32518,
+      "sha256": "6b1379e6f4e49e5729b1fda8fcb2aa847bfd09ec22a8829aef174e23918eb227"
+    },
+    {
+      "path": "Models/Interior/Panel/Instruments/oilpress/oilpress.png",
+      "bytes": 69834,
+      "sha256": "2b155aa176bab1438828e743f44161fdb66f94c3628da47dbb2d77b812e968dd"
+    },
+    {
+      "path": "Models/Interior/Panel/Instruments/oilpress/oilpress0.xml",
+      "bytes": 1600,
+      "sha256": "afd1a9bf010a2ffb7b03c5ba57a077d27dec7905be9ecef364d89a36ceb3f255"
+    },
+    {
+      "path": "Models/Interior/Panel/Instruments/oilpress/oilpress1.xml",
+      "bytes": 1600,
+      "sha256": "708b1651054c453f13a32f3560b31019421a6fc371cb8ba2632dc28f9e60c9b9"
+    },
+    {
+      "path": "Models/Interior/Panel/Instruments/rmi/rmi.ac",
+      "bytes": 83844,
+      "sha256": "28d25f0dddfb8f837695aebb40c628dcb98072fc5a11398325b5fd48ce32d12a"
+    },
+    {
+      "path": "Models/Interior/Panel/Instruments/rmi/rmi.png",
+      "bytes": 136338,
+      "sha256": "53e6349e900cb50f6df286472013aa7d7e8089ef0fb19dedeee94819cb6fc31c"
+    },
+    {
+      "path": "Models/Interior/Panel/Instruments/rmi/rmi.xml",
+      "bytes": 2272,
+      "sha256": "51bed304c1ceb623332b6b46066fb5d92c7ee8a6e5d8eab7894b42f776913540"
+    },
+    {
+      "path": "Models/Interior/Panel/Instruments/switch/all-switchs.xml",
+      "bytes": 5145,
+      "sha256": "3012ea492527bb7be7750ba53d2037b8f79675c2b6c2f0d78a015cb42211f4f1"
+    },
+    {
+      "path": "Models/Interior/Panel/Instruments/switch/selector.ac",
+      "bytes": 29073,
+      "sha256": "cfda01c22b3827d3efa670fcea085fe2ed7da1237c2d15713c3c096d996a54ab"
+    },
+    {
+      "path": "Models/Interior/Panel/Instruments/switch/selector.xml",
+      "bytes": 571,
+      "sha256": "eefecaeb4769d2845597283b97bb9b497fa223356db7b652e8467fb40dbe8182"
+    },
+    {
+      "path": "Models/Interior/Panel/Instruments/switch/switch.ac",
+      "bytes": 156984,
+      "sha256": "ac233a8ae880965147489e08dcd1627f1dd31eeb6ca67c2941c8dbcb602cd330"
+    },
+    {
+      "path": "Models/Interior/Panel/Instruments/switch/switch.png",
+      "bytes": 8924,
+      "sha256": "7c6ef43cb4ff99f1d373877d5a236f0b1d27502cf13691b9269f9750aaf55634"
+    },
+    {
+      "path": "Models/Interior/Panel/Instruments/switch/switch.xml",
+      "bytes": 1405,
+      "sha256": "9704bae3c73d666711a25d5fee194d7b395a47ed98b32114714b7e0dbfce570b"
+    },
+    {
+      "path": "Models/Interior/Panel/Instruments/tac/.directory",
+      "bytes": 68,
+      "sha256": "c78871d6b70a675980ad05efe7cdea9216562b31ef3a8475332c064173c8778c"
+    },
+    {
+      "path": "Models/Interior/Panel/Instruments/tac/tac.ac",
+      "bytes": 50072,
+      "sha256": "4ea24fc83e49c73935fe355e264ac57c150c1c43ff1c7ff8db17326be158fa87"
+    },
+    {
+      "path": "Models/Interior/Panel/Instruments/tac/tac.png",
+      "bytes": 91970,
+      "sha256": "4931ce077e18901bb185a0503544731ca907f2619383eca3a0be8719735a2225"
+    },
+    {
+      "path": "Models/Interior/Panel/Instruments/tac/tac0.xml",
+      "bytes": 3463,
+      "sha256": "83029a46f7314b2157774de035be050d4dc3f2f03cf41c4e35a118ec3a8b713c"
+    },
+    {
+      "path": "Models/Interior/Panel/Instruments/tac/tac1.xml",
+      "bytes": 3463,
+      "sha256": "7555165655826b1f7aded9b2399a9c9cd2b51e15b3bd7a417260a70b77dafd0e"
+    },
+    {
+      "path": "Models/Interior/Panel/Instruments/turn/turn.ac",
+      "bytes": 113398,
+      "sha256": "f66e6238c8bb31ac5509d98f1d1bc1462be093f1646c5edb4c6ceb4053a57bd1"
+    },
+    {
+      "path": "Models/Interior/Panel/Instruments/turn/turn.png",
+      "bytes": 81234,
+      "sha256": "72dc4d24233d115b06e63e7699fe870ba5ad2b267ea2dbb6a31e7ebe6bd0e9f5"
+    },
+    {
+      "path": "Models/Interior/Panel/Instruments/turn/turn.xml",
+      "bytes": 2085,
+      "sha256": "3568c01c1b5c3f9e485815407cd88dd727ad7b031a97d387f11cf58ee36cde50"
+    },
+    {
+      "path": "Models/Interior/Panel/Instruments/voltmeter/voltmeter.ac",
+      "bytes": 37958,
+      "sha256": "e17dcf1a0f0494d8a06f3e7ce4d4fef56f77031106bf998eb7956b25754d8dcd"
+    },
+    {
+      "path": "Models/Interior/Panel/Instruments/voltmeter/voltmeter.png",
+      "bytes": 66960,
+      "sha256": "80233603339da0ed9843e4053da1a5539101fc95fa1b291a0b4aca4e11257686"
+    },
+    {
+      "path": "Models/Interior/Panel/Instruments/voltmeter/voltmeter.xml",
+      "bytes": 1570,
+      "sha256": "9b6526606ffeec97480297012eef53324feec992f22c9f2faf3ec7947a9eb789"
+    },
+    {
+      "path": "Models/Interior/Panel/Instruments/vor/vor.ac",
+      "bytes": 102050,
+      "sha256": "540973e29692f323b0cf94b1c251b1775fd33271409d823dd6f2eaeb550e731e"
+    },
+    {
+      "path": "Models/Interior/Panel/Instruments/vor/vor.png",
+      "bytes": 126547,
+      "sha256": "2d4a4f0d80ed080fa36d3143b1d2a1593393179948ebc74198ac1a900ec9baef"
+    },
+    {
+      "path": "Models/Interior/Panel/Instruments/vor/vor.xml",
+      "bytes": 5530,
+      "sha256": "8f0d2d4154047ce1730f6a928dd409a0561d10b78444ed63c386b39930132486"
+    },
+    {
+      "path": "Models/Interior/Panel/Instruments/vsi/vsi.ac",
+      "bytes": 93808,
+      "sha256": "0ff12214f77de8b604efad70cfb4951f4bb90e7865217ded1c31fdc89d4d8ea9"
+    },
+    {
+      "path": "Models/Interior/Panel/Instruments/vsi/vsi.png",
+      "bytes": 14463,
+      "sha256": "6e75718f27d74f3ca96983eef6d6a0eafcc6a8550fb1a519bf7be2555f690976"
+    },
+    {
+      "path": "Models/Interior/Panel/Instruments/vsi/vsi.xml",
+      "bytes": 1902,
+      "sha256": "8b6d26b6c18d5775f1f04313f03de176f0e913667e85097f7f70867612089783"
+    },
+    {
+      "path": "Models/Interior/Panel/Instruments/warning/warning.ac",
+      "bytes": 96720,
+      "sha256": "d0a17c13961082a2bcb38908919158d6d84dfb86146ba38ba1676d39efbe4a63"
+    },
+    {
+      "path": "Models/Interior/Panel/Instruments/warning/warning.png",
+      "bytes": 13051,
+      "sha256": "d44d347e31c4fc4f7b9890185250fc9611d1a3e573fd127afb6a73be4713f4fc"
+    },
+    {
+      "path": "Models/Interior/Panel/Instruments/warning/warning.xml",
+      "bytes": 2962,
+      "sha256": "58cac99b002d49bd647d5be2f486be7e7f0102d91dde90761089e864758364a2"
+    },
+    {
+      "path": "Models/Interior/Panel/Instruments/yokes/all-yokes.xml",
+      "bytes": 387,
+      "sha256": "89b91647c28d0b932576ba4eabe67b13f86d41f2fc84faee51b1ba19c5cc0490"
+    },
+    {
+      "path": "Models/Interior/Panel/Instruments/yokes/yoke.ac",
+      "bytes": 205088,
+      "sha256": "4f65af07c36cc7a0b865c3adac9cbf04579e646c845914944a2dbd2bbe7c728e"
+    },
+    {
+      "path": "Models/Interior/Panel/Instruments/yokes/yoke.xml",
+      "bytes": 1143,
+      "sha256": "da5c99f42c9c1787700d5d5b564a70a4c0043aeeb9b54bbcd66f214413a6ddc8"
+    },
+    {
+      "path": "Models/Interior/Panel/Instruments/yokes/yokes.png",
+      "bytes": 28674,
+      "sha256": "32ab7bf0eee66d9bae7096713e385ee8a8e4c1be3b08c97986b44eb8429bfd6a"
+    },
+    {
+      "path": "Models/Interior/Panel/Pedestal/all-pedestals.xml",
+      "bytes": 242,
+      "sha256": "5193278ef949a3b4bd94ea5b274ac841f501dc2df725c99fb5bc711a73bd82da"
+    },
+    {
+      "path": "Models/Interior/Panel/Pedestal/pedestal.ac",
+      "bytes": 111780,
+      "sha256": "a0cacb3d05ad7344f5f9f69f4e44cb4f20064845e260daf3a78eca5338b3cfc2"
+    },
+    {
+      "path": "Models/Interior/Panel/Pedestal/pedestal.png",
+      "bytes": 17095,
+      "sha256": "ff7318977e772c2f2e46a3272b56f6113295cdfd160192d3350dabd2b1ba6890"
+    },
+    {
+      "path": "Models/Interior/Panel/Pedestal/pedestal.xml",
+      "bytes": 2698,
+      "sha256": "5ec6051f2b6eb4725b54f19c89bae6b3989701b55627f528edc2b68cf60dda3f"
+    },
+    {
+      "path": "Models/Interior/Panel/all-panels.xml",
+      "bytes": 233,
+      "sha256": "d7e29b510b59a05c2843ca14a613037d57e5c1145d71bfa187494a05e46731dc"
+    },
+    {
+      "path": "Models/Interior/Panel/panel.ac",
+      "bytes": 48670,
+      "sha256": "75ac2db1ce858ea474e297b591646214fe4b786b1e4f6e9dadc61872e0bffa2e"
+    },
+    {
+      "path": "Models/Interior/Panel/panel.png",
+      "bytes": 15508,
+      "sha256": "d0fa2c458e3d6619a272da09f6ef5c3933023b984881feebb8a9920086516a24"
+    },
+    {
+      "path": "Models/Interior/Panel/panel.xml",
+      "bytes": 13531,
+      "sha256": "1b469bb938b0e6469d216182adfe39af892ab5e28c9d2d0c7d948649a7ed79b6"
+    },
+    {
+      "path": "Models/Interior/interior.ac",
+      "bytes": 281582,
+      "sha256": "8a6795a01c2086469012e19415a7a35a95729fde2e0146046c91c269039335cf"
+    },
+    {
+      "path": "Models/Interior/interior.png",
+      "bytes": 33295,
+      "sha256": "71a6aa024d0ccf536aa46179695b3750aacdc4b0625b485605df6390a3c0982b"
+    },
+    {
+      "path": "Models/Interior/interior.xml",
+      "bytes": 5389,
+      "sha256": "762a0e46637a396c935ea8da6959f798007ade0902f34f1bfae5250fa600db0b"
+    },
+    {
+      "path": "Models/Interior/seats/all-seats.xml",
+      "bytes": 387,
+      "sha256": "3cf3fd33f2976fe0ca9e5439695946cb586e858e0e45565ed2cae8f4f66ed3ba"
+    },
+    {
+      "path": "Models/Interior/seats/seat.ac",
+      "bytes": 25145,
+      "sha256": "bf615913867622716b86d5854fed1b7e80bcf4a815652d466609c9f18e066612"
+    },
+    {
+      "path": "Models/Interior/seats/seat.xml",
+      "bytes": 195,
+      "sha256": "5010e37de6de097abd62c343911e738b6c2aabbce2bb1f94e0707e4495181493"
+    },
+    {
+      "path": "Models/Interior/seats/seats.png",
+      "bytes": 151102,
+      "sha256": "b8a9bf134b5ea4c1a57528c27b54bcdee57c80d3cbde6d87693f9938df923382"
+    },
+    {
+      "path": "Models/Liveries/Readme.txt",
+      "bytes": 65,
+      "sha256": "8454d21fcac87da7dc1d4b2709712f7e0984f3ebd2f6979c7303e7ef5f07d823"
+    },
+    {
+      "path": "Models/Liveries/default.xml",
+      "bytes": 423,
+      "sha256": "8f5fc7da6f84df764efe04cbbacc4b746d2bc907dc3bd2b4b643eec4233682e3"
+    },
+    {
+      "path": "Models/Pilot/Read-Me.txt",
+      "bytes": 898,
+      "sha256": "f3048a8e9911cf8697a87bb27193cdcb9cc1d6a5fb9b11eb16aec276cb385aa7"
+    },
+    {
+      "path": "Models/Pilot/all-pilots.xml",
+      "bytes": 1101,
+      "sha256": "783f41c399ea7c2f9bac38cece592596d2edfa7bc512debe5671e0f23973d672"
+    },
+    {
+      "path": "Models/Pilot/fighter_default.ac",
+      "bytes": 351332,
+      "sha256": "caac63535652939d42265fd431631a8b62e4a5bfc5e3be2874c46681927cfe52"
+    },
+    {
+      "path": "Models/Pilot/fighter_pilot.png",
+      "bytes": 474651,
+      "sha256": "3188adf2cf22bcdebd00832605432dfaaaf60a4f8db2f900e930299e05f4dc1f"
+    },
+    {
+      "path": "Models/Pilot/pilot.ac",
+      "bytes": 1328416,
+      "sha256": "5ba9a76d4e19c37b86fe06581a690ee32a0f57ae1677670013c4d8cb191c77ca"
+    },
+    {
+      "path": "Models/Pilot/pilot.xml",
+      "bytes": 2283,
+      "sha256": "820b8e76d57f4d5999d3d0c63923c78318e668fdddd0bab80630eea7668b6194"
+    },
+    {
+      "path": "Models/Pilot/transp.png",
+      "bytes": 17067,
+      "sha256": "d4b9fd652e18e6b9b83c8935ee72d6577b19c3561e3386d1e5d90aedb05f1a9e"
+    },
+    {
+      "path": "Models/a37.ac",
+      "bytes": 2332690,
+      "sha256": "35c76c1a3fda1bd69b767fa030ff37ef3f0f4fe8a412d69349a94e176eb9c0b7"
+    },
+    {
+      "path": "Models/a37.xml",
+      "bytes": 26357,
+      "sha256": "cdb571af0296c2a51000a122c9fbaa7bf291bc378dd05f38ead56aaa18d2db85"
+    },
+    {
+      "path": "Models/lights/ALS/BlueLight.xml",
+      "bytes": 1248,
+      "sha256": "2247c8ad7f6095750bb5e72b59e27987ff82e84afadb7e29af07c73fce8b1318"
+    },
+    {
+      "path": "Models/lights/ALS/GreenLight.xml",
+      "bytes": 1251,
+      "sha256": "6ca82d7ce71618ecac3b4429224ed5df24c883917e9d1c22c24d4ea2a79b832e"
+    },
+    {
+      "path": "Models/lights/ALS/RedLight.xml",
+      "bytes": 1249,
+      "sha256": "f08d696031ab479d454a422028dc710dda7501c1346b82df31ebe7a8a6d1cc1b"
+    },
+    {
+      "path": "Models/lights/ALS/StrobeLight.xml",
+      "bytes": 1179,
+      "sha256": "8a0e75936429324100bd3ea6af409305f8125cac6af24d511fb2afa04cf41f4b"
+    },
+    {
+      "path": "Models/lights/ALS/WhiteLight.xml",
+      "bytes": 1257,
+      "sha256": "ee44b119553ab4f3f6a104b010bc7f728ab55f770af284334753c7ca523cc67c"
+    },
+    {
+      "path": "Models/lights/ALS/beacon.xml",
+      "bytes": 1273,
+      "sha256": "b06b87cc5634f2f97174cdd65e9be25815b61afd5dbc6609f57b06e7f8c296f1"
+    },
+    {
+      "path": "Models/lights/ALS/light-cone.xml",
+      "bytes": 2103,
+      "sha256": "3f47f9cdcc7d19c7b9c2ac2f2c78b2ec34b35d1bfb85182f2e04083155a1b9ed"
+    },
+    {
+      "path": "Models/lights/ALS/lights.png",
+      "bytes": 153278,
+      "sha256": "753c7905ac38eda3a8203ece494aae6be706c5d8b950f7a5da0812a97c38a208"
+    },
+    {
+      "path": "Models/lights/ALS/petitcone.ac",
+      "bytes": 2631,
+      "sha256": "20d23888091abf1433685411fb14dc383e6f3f6360a58504b6f7ddd34c1b997d"
+    },
+    {
+      "path": "Models/lights/BlueLight.xml",
+      "bytes": 1117,
+      "sha256": "a7826f5f8baf0b5c040dde9a1549c537ffcc026378d4528a0dc010db65c8a14b"
+    },
+    {
+      "path": "Models/lights/Classic/BlueLight.ac",
+      "bytes": 1550,
+      "sha256": "ec8b559f80375b4679d454e199933377cd9adbc2de8469de541686697723bf61"
+    },
+    {
+      "path": "Models/lights/Classic/BlueLight.xml",
+      "bytes": 1448,
+      "sha256": "50eba315ba331e607dabc9efd982d17676f6f686b543ca009822da4eee80480a"
+    },
+    {
+      "path": "Models/lights/Classic/GreenLight.ac",
+      "bytes": 1641,
+      "sha256": "37ac0adfb78dda005820c7f47c7f4e8e97c668d0cf2d205b1fbde6ddde599cf5"
+    },
+    {
+      "path": "Models/lights/Classic/GreenLight.xml",
+      "bytes": 1449,
+      "sha256": "7cda925c09692891ab9e8648e80d66e698bdc8d35d3ce1e1558dd75eb4039e0d"
+    },
+    {
+      "path": "Models/lights/Classic/RedLight.ac",
+      "bytes": 1641,
+      "sha256": "b2f021203ec64949ba13c00ca74a3c7b3a36b024c124b4bfcce060895da7ca04"
+    },
+    {
+      "path": "Models/lights/Classic/RedLight.xml",
+      "bytes": 1447,
+      "sha256": "1a898dd6e969981ff7f997986b7bee493ccdb2c5ca2b3a2f6bdd9e777e065d5d"
+    },
+    {
+      "path": "Models/lights/Classic/StrobeLight.xml",
+      "bytes": 1398,
+      "sha256": "3b57cc5149571a56ebfa2b74e6549fdb3b41887165ebb5231447b51a117829a0"
+    },
+    {
+      "path": "Models/lights/Classic/WhiteLight.ac",
+      "bytes": 1538,
+      "sha256": "4fb0f6dee66e41b036a283720107824485b9b935ab172ecb291f1e4303b2a38a"
+    },
+    {
+      "path": "Models/lights/Classic/WhiteLight.xml",
+      "bytes": 1449,
+      "sha256": "68f953687a65a5513ed543678939a551e684e72e1368119ec0a730b76cb4c1ae"
+    },
+    {
+      "path": "Models/lights/Classic/beacon.xml",
+      "bytes": 1763,
+      "sha256": "fe99658954a50763d9e9c6f2d6a7233be3d99a129d3eabff69b1865f43768659"
+    },
+    {
+      "path": "Models/lights/Classic/light-cone.ac",
+      "bytes": 52000,
+      "sha256": "820ab9a74a8ba055517c065715760a9e55bcf353f5c68c7b71c6c2922d647436"
+    },
+    {
+      "path": "Models/lights/Classic/light-cone.xml",
+      "bytes": 1364,
+      "sha256": "321fb8e3984cd24f0ed19d14b5cd2b0fdb7ed16d6fc69bd79415d01259596722"
+    },
+    {
+      "path": "Models/lights/Classic/light-gradient-lamp.png",
+      "bytes": 2970,
+      "sha256": "52574927208001176c9d14faeae2aa8ab201fa76a69885972f6c52a80e2025c6"
+    },
+    {
+      "path": "Models/lights/Classic/lights.png",
+      "bytes": 149736,
+      "sha256": "460ee33d64c9e767cb6e3b3c9d7e37b613652e3cce8243baeb8bcf859a2caad0"
+    },
+    {
+      "path": "Models/lights/GreenLight.xml",
+      "bytes": 1126,
+      "sha256": "0cd554c643e753821f926fa4601d6a017e1be49208a9924a506615a8d999c480"
+    },
+    {
+      "path": "Models/lights/HDR/BlueLight.xml",
+      "bytes": 673,
+      "sha256": "e057367c2473105267347effd70799800c48094d935ec1cd8807fd67821b3f0a"
+    },
+    {
+      "path": "Models/lights/HDR/GreenLight.xml",
+      "bytes": 676,
+      "sha256": "5363f8b46c41c0927533c7174b67c9adbbd58af84e018a40ea008be174016e01"
+    },
+    {
+      "path": "Models/lights/HDR/RedLight.xml",
+      "bytes": 670,
+      "sha256": "d01808d77728b9fa5c3346a4e658e3b08bcc213fae9fa77f73827570534b9851"
+    },
+    {
+      "path": "Models/lights/HDR/StrobeLight.xml",
+      "bytes": 777,
+      "sha256": "63c07689b149a36ede235976608baf1437ab86b0c42049319c41c78bcd426163"
+    },
+    {
+      "path": "Models/lights/HDR/WhiteLight.xml",
+      "bytes": 676,
+      "sha256": "1fab92e9c02f743686c0dc7bf9bafd199665d2942aa77c53df576db97c0ba49f"
+    },
+    {
+      "path": "Models/lights/HDR/beacon.xml",
+      "bytes": 792,
+      "sha256": "b264bf93c8731a9c16f8df8ccc8ffba4fc0c607f7e1a362a40056f5dc241fdbd"
+    },
+    {
+      "path": "Models/lights/HDR/light-cone.xml",
+      "bytes": 886,
+      "sha256": "14c6f72ed62d968e9c126cf45d2a79d0b640979c9802a024bd0dc075f4e51f80"
+    },
+    {
+      "path": "Models/lights/HDR/lightpanel.xml",
+      "bytes": 532,
+      "sha256": "1fc9c55744390a7b68774c597a05f01927d8ad22ab450565787e519740ca2138"
+    },
+    {
+      "path": "Models/lights/RedLight.xml",
+      "bytes": 1108,
+      "sha256": "1e13a6e28e914bec5279ed46cbdd2910ad35568c71b86b74c03e12214d5f8f79"
+    },
+    {
+      "path": "Models/lights/StrobeLight.xml",
+      "bytes": 1087,
+      "sha256": "b051303a0ca5824f1929d46cb6ecf1c8f3316019be81b7fa60750ce87b9f4459"
+    },
+    {
+      "path": "Models/lights/WhiteLight.xml",
+      "bytes": 1126,
+      "sha256": "59fe923c6c69bb7080621ff889ba99a646fe469c11d4aa152064e49e1ed9edf1"
+    },
+    {
+      "path": "Models/lights/all-lights.xml",
+      "bytes": 1774,
+      "sha256": "48911901e333fb69d2ad669d1ecf86f3afebf4e30f86909a68d571a439122734"
+    },
+    {
+      "path": "Models/lights/beacon.xml",
+      "bytes": 1090,
+      "sha256": "778692fb771f76f58ca9fdb191072fbc45a5f04294214b8b7e1b5e8e4d0fa32f"
+    },
+    {
+      "path": "Models/lights/light-cone.xml",
+      "bytes": 1072,
+      "sha256": "c8e2ef25fae8818e570d4bc5e386d89fa5b07a1a0786abef56ada6511c6487e9"
+    },
+    {
+      "path": "Models/texture.png",
+      "bytes": 1832734,
+      "sha256": "91ea300d6ac8d7d709cd65aee6cf6d03d2f726b545d1ab12c05167be570b7c13"
+    },
+    {
+      "path": "Models/texture.xcf.gz",
+      "bytes": 3839582,
+      "sha256": "b83336278f456cacbf9dff86d015f6626dae1a5740e6ce629229f2fc65af569e"
+    },
+    {
+      "path": "Nasal/Electrical.nas",
+      "bytes": 11474,
+      "sha256": "ff9954971c94e5d7af34199b3bdab6f65d95dd3d1266a3e553bdaa1abcde1ab4"
+    },
+    {
+      "path": "Nasal/convert.nas",
+      "bytes": 7667,
+      "sha256": "3f5a35868fe7af252b13f3c469fd8a5f9f1b2e3b809222be640eacf5cb7831db"
+    },
+    {
+      "path": "Nasal/dialogs.nas",
+      "bytes": 119,
+      "sha256": "5898e39fb703723259ab57518adc850b5d53994f5ef20d3018a24c129847f1b3"
+    },
+    {
+      "path": "Nasal/doors.nas",
+      "bytes": 175,
+      "sha256": "c3824eaf1097ebcc010582c34d40adaf731338649186635329d49b4cb365d071"
+    },
+    {
+      "path": "Nasal/engines-yasim.nas",
+      "bytes": 2075,
+      "sha256": "e5d308edf1ee0a6c74c8c0dec952fa850f304928c9d318e67ddbe4336468d66c"
+    },
+    {
+      "path": "Nasal/generic-yasim-engine.nas",
+      "bytes": 8339,
+      "sha256": "6d7c1f33ff5e9c4ac2ae05b3ecd2354b97ba3aaa90b2719501616d9d14933d3e"
+    },
+    {
+      "path": "Nasal/gmeter.nas",
+      "bytes": 698,
+      "sha256": "3ba745648ab95f4e693690aa7a6a43044d45647124debc6c19e3a3dd841a4eb6"
+    },
+    {
+      "path": "Nasal/hdr.nas",
+      "bytes": 862,
+      "sha256": "4c17fbf90e1614dc7c011260e1b4fe0a65ee994c1c7feb4ea855386888c7f565"
+    },
+    {
+      "path": "Nasal/hydraulic.nas",
+      "bytes": 877,
+      "sha256": "58b93bfc9c643abfbe6f292ba20722eb6292df242d57bdf7dc46fd952ef24845"
+    },
+    {
+      "path": "Nasal/light.nas",
+      "bytes": 918,
+      "sha256": "b73e2a95b5bb6a8fa7f7cf6ed9b05a1213a13f8fd2c326f71efa39cdfcbb02c6"
+    },
+    {
+      "path": "Nasal/liveries.nas",
+      "bytes": 71,
+      "sha256": "e0ac7927408322dc328aca86b9a1457bd0014c4ebcd370224b1f4f4535b677b6"
+    },
+    {
+      "path": "Nasal/mass.nas",
+      "bytes": 4774,
+      "sha256": "54ff1ffc6b83ea27122d454c6b42a99080e182ce5384815ee599fb2491d26ed8"
+    },
+    {
+      "path": "Nasal/weapons.nas",
+      "bytes": 3993,
+      "sha256": "68ace07a8907938522f5389fb4c6bcde946460886677a669cdde99c57678e1d4"
+    },
+    {
+      "path": "Previews/a37-0.png",
+      "bytes": 1637590,
+      "sha256": "b98577fd1ccff92b79b1d37c200014d49ec60a524ceb80743fdf5093ee3a883a"
+    },
+    {
+      "path": "Previews/a37-1.png",
+      "bytes": 2851495,
+      "sha256": "9bf95cf77f0d035697cb2f97d4a0d594e57d42d3cfa443567eff3eed37336eab"
+    },
+    {
+      "path": "Previews/a37-2.png",
+      "bytes": 3368935,
+      "sha256": "76cfd2e5c6357cf4bd217ec163e1a8a7e7430b82ed1738e0a8ccb38a44968840"
+    },
+    {
+      "path": "Previews/a37-3.png",
+      "bytes": 1670916,
+      "sha256": "198c362e3642c56606879da8eea9fa7fbdd9ecd5c497b6be939e7ba1b801571d"
+    },
+    {
+      "path": "Previews/a37-4.png",
+      "bytes": 3129547,
+      "sha256": "3c9f3bcdea4e321299ca469716730bbbe4e06549a777463c564decccfca65d50"
+    },
+    {
+      "path": "Previews/a37-5.png",
+      "bytes": 1381560,
+      "sha256": "a959afb03378c4274a737e99606120ce12d14a3a8dfc2210b9f6d06f29e69316"
+    },
+    {
+      "path": "Read-Me.txt",
+      "bytes": 1347,
+      "sha256": "78d2278c887149554d2fc4f18fd9ed89d33603c452c7bc1a1240f9b2bd50254f"
+    },
+    {
+      "path": "Sounds/DoorClosed.wav",
+      "bytes": 11232,
+      "sha256": "e29a01acc787d3a194bf835c6d246249500e55c5b66a1070e79bbd00ac1edfb5"
+    },
+    {
+      "path": "Sounds/DoorOpen.wav",
+      "bytes": 11232,
+      "sha256": "0df2e0acd120aec117ed1038747a236fc3d5aa33cdb35d5dfdb8b6d5135d223a"
+    },
+    {
+      "path": "Sounds/a37-sound.xml",
+      "bytes": 19447,
+      "sha256": "996e4d00c271387ba4da997ae8e7a9ab3fc7eec83d83f8ec9ec16be42d162071"
+    },
+    {
+      "path": "Sounds/afterburner.wav",
+      "bytes": 441868,
+      "sha256": "a6da485e41bf59c66041f60ee08baaac70cfc462fc54d860ab00de2f23ed5c1e"
+    },
+    {
+      "path": "Sounds/flaps.wav",
+      "bytes": 202444,
+      "sha256": "098ba66c3942c96081da09e46151de457caa68264cae799f95d6b13b89e08944"
+    },
+    {
+      "path": "Sounds/gear.wav",
+      "bytes": 376508,
+      "sha256": "2dd7f1f7e37a457c1f758e1ad193006c704800d2db60bbf66979e9ae73a0c41f"
+    },
+    {
+      "path": "Sounds/gunfire.wav",
+      "bytes": 60130,
+      "sha256": "d417fe4ec1427faab6d3bdc0dc844e6c22ae408a86702056eddb973b8b55d8e1"
+    },
+    {
+      "path": "Sounds/mp-sound.xml",
+      "bytes": 17682,
+      "sha256": "56600a408b16adf6643b5308b5ccd0c26977a0d56d076a2d0f9ca6070a227a96"
+    },
+    {
+      "path": "Sounds/rain_canopy.wav",
+      "bytes": 55268,
+      "sha256": "e75a90a57572c067d710fa1968d5a6e5f7396c73895c7b07bd4084552a687b2a"
+    },
+    {
+      "path": "Sounds/running.wav",
+      "bytes": 293524,
+      "sha256": "53fe2dd18460c09f6c6cb7708756cad791b657b7c5c427dc300d7c49e39c5756"
+    },
+    {
+      "path": "Sounds/running2.wav",
+      "bytes": 222684,
+      "sha256": "1baa6c916d9b02446bd3f67b7a86e87e46b31d5cc7c71f7a339f2bc274b9d197"
+    },
+    {
+      "path": "Sounds/shutdown.wav",
+      "bytes": 263164,
+      "sha256": "9684494c40025f45ba289cbd859662986c3e0c78117cef0f6bc54bae68fab868"
+    },
+    {
+      "path": "Sounds/stall.wav",
+      "bytes": 56804,
+      "sha256": "a7ea1ebaf50a710c686598a4336d383dbb2cbdf4e37dcde23e2a4219070961f2"
+    },
+    {
+      "path": "Sounds/starter.wav",
+      "bytes": 2123220,
+      "sha256": "f704412d7924938c982b6a68b0e6682dca84770de09355dacbb57eac3eae8818"
+    },
+    {
+      "path": "Sounds/wind.wav",
+      "bytes": 117436,
+      "sha256": "71919a3879167c4122d1832b15b3638dd308036036ed8a388cd0d718b23b2711"
+    },
+    {
+      "path": "Systems/a37-base.xml",
+      "bytes": 13590,
+      "sha256": "1d60579c42beb45efc3046dec2c18ffcaba23b3de9aa7a37ba7d710c2a3313db"
+    },
+    {
+      "path": "Systems/a37-keyboard.xml",
+      "bytes": 10240,
+      "sha256": "2cb5cdb4a2c2717b25477c546e1872afb66b50aabb1e059e61f2d9960f42698b"
+    },
+    {
+      "path": "Systems/a37-yasim.xml",
+      "bytes": 14493,
+      "sha256": "588cdddac170582d4a47fc997962c41642d28d405911dc9f303b5f35b7650da1"
+    },
+    {
+      "path": "Systems/ai.xml",
+      "bytes": 501,
+      "sha256": "7e4e8346c7b7570bdff9bf9fa4f89af7c04fa6297237cd603d2071d909b362d7"
+    },
+    {
+      "path": "Systems/aircraft-data.xml",
+      "bytes": 1012,
+      "sha256": "57aaee798988d12b5155bd843f137d308148061e31cb55db0e6982ec9d1c0aba"
+    },
+    {
+      "path": "Systems/consumables.xml",
+      "bytes": 1758,
+      "sha256": "5b272c41345ae52866214d50d8a3e7c26373288eef40f42f6d8efc88df683af0"
+    },
+    {
+      "path": "Systems/controls.xml",
+      "bytes": 2165,
+      "sha256": "6c5269966520b5097572c02c19888a9de27f6b3e38f2c5e82d4f8994d220e211"
+    },
+    {
+      "path": "Systems/engines.xml",
+      "bytes": 336,
+      "sha256": "1ebd42270c016b372f8640940760064e65a2ecd1345e0f0044460649824a0e94"
+    },
+    {
+      "path": "Systems/flaps.xml",
+      "bytes": 205,
+      "sha256": "63edd773cb4dd137de30e01c0dfc04194b5a99e0e954097ad06171c76d659052"
+    },
+    {
+      "path": "Systems/glass-rain.xml",
+      "bytes": 5443,
+      "sha256": "b62b91cbbd2e9b68b6b90a04179299bd56453a88b10a899d4cec639eea3933ef"
+    },
+    {
+      "path": "Systems/help.xml",
+      "bytes": 565,
+      "sha256": "28e66013b5d5c2a6c511f73ec05abc798cb17f01ad9ce846f52ac36b7ce9ccef"
+    },
+    {
+      "path": "Systems/initialisation.xml",
+      "bytes": 2284,
+      "sha256": "9b7b7df6027b7318679d6f0c22b02d30f23f770df9b536a226e4dc7b9875d374"
+    },
+    {
+      "path": "Systems/instrumentation.xml",
+      "bytes": 7951,
+      "sha256": "27c920e67304d74c4dec7c16c64da2e0a24e1cc430c93412a32fb9ca2ebb0b71"
+    },
+    {
+      "path": "Systems/rules.xml",
+      "bytes": 481,
+      "sha256": "0fe8afe38f81150293e02d8ff299653a134a98407107ac0d824481cb7ed009fd"
+    },
+    {
+      "path": "Systems/systems.xml",
+      "bytes": 148,
+      "sha256": "736adf93cc3d932a1d469ba24ca961040e13c6de515a15c830e9463a4f77c3ac"
+    },
+    {
+      "path": "Systems/views.xml",
+      "bytes": 3306,
+      "sha256": "17b7f74fedda7c623a3354f41e7fa287dcdb1468c62eefc7e6ad7b5172585d85"
+    },
+    {
+      "path": "a37-set.xml",
+      "bytes": 1904,
+      "sha256": "4cb38ecc657384515f47e9733e74d1b9a8d49769d77b3eb15ee83f9dc6c9cbc3"
+    },
+    {
+      "path": "a37-splash.png",
+      "bytes": 219096,
+      "sha256": "8ff866bd377b382e93b62f6eb33680c015922bb8182da82d835fc92f89843097"
+    },
+    {
+      "path": "thumbnail.jpg",
+      "bytes": 14458,
+      "sha256": "26e9db6129ea2535cd4239a58db04d435ceb3c1b8c403908754b4939d8f87074"
+    }
+  ]
+}

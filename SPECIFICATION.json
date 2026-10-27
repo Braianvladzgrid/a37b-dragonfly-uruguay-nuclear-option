@@ -1,0 +1,58 @@
+{
+  "aircraft": "Cessna A-37B Dragonfly",
+  "operator": "Fuerza Aerea Uruguaya",
+  "key": "A37B_Dragonfly_Uruguay",
+  "rankRequired": 1,
+  "valueMillions": 13,
+  "price": 13000000,
+  "status": "source-verified-and-31-models-converted-not-yet-flyable",
+  "requested_features": [
+    "FAU livery",
+    "dedicated icon",
+    "side-by-side cockpit and exterior pilots",
+    "retractable tricycle landing gear",
+    "native weapons and functional HUD/instruments"
+  ],
+  "design_constraints": {
+    "afterburner": false,
+    "propellers": false,
+    "pilot_seats": 2,
+    "native_physics_and_damage": true,
+    "external_stations_target": 8,
+    "station_count_status": "eight source attachment records found in Systems/a37-base.xml; physical clearances not yet verified"
+  },
+  "source": {
+    "repository": "FlightGear FGAddon",
+    "revision": 21797,
+    "author": "Emmanuel Baranger (helijah)",
+    "archive_sha256": "7341f07d1e658fa034a6e42677b93cf54730f956b1c4bbf61ec6c673b1c5a5f9",
+    "license_file": "SourceAssets/COPYING-GPL2.txt"
+  },
+  "reference": {
+    "url": "https://museo.fau.mil.uy/aeronave/fichas/cessna_a-37_b",
+    "model": "A-37B",
+    "maximum_speed_kmh": 770,
+    "engines": 2,
+    "thrust_kgf_each": 1293,
+    "payload_kg_reference": 1800,
+    "note": "Reference targets only, not measured in-game performance"
+  },
+  "conversion": {
+    "models": 31,
+    "triangles": 64095,
+    "body_triangles": 23606,
+    "source_body_bounds_m": [
+      [
+        -5.984735,
+        -1.349997,
+        -4.307729
+      ],
+      [
+        5.984735,
+        1.350994,
+        4.149446
+      ]
+    ],
+    "dimensions_status": "source bounds recorded; real A-37B dimensions/refueling-probe variant need validation before fitting"
+  }
+}

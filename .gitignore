@@ -1,0 +1,11 @@
+/Library/
+/Temp/
+/Logs/
+/Obj/
+/Builds/
+/UserSettings/
+/Packages/nuclearoption/
+/Assets/Blueprinter/_donotship/
+*.log
+*.csproj
+*.sln

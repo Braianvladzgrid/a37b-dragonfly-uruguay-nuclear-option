@@ -1,0 +1,9 @@
+newmtl clock_material_0
+Kd 1.0 1.0 1.0
+d 1.0
+illum 2
+map_Kd clock.png
+newmtl clock_material_1
+Kd 0.547091 0.565624 0.595981
+d 0.15000000000000002
+illum 2
