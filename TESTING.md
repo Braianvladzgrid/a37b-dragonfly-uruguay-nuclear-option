@@ -1,38 +1,27 @@
 # Development validation
 
-This is an ongoing test record. Do not treat successful import or compilation
-as evidence that the aircraft can take off or that its performance is authentic.
+Native Nuclear Option 0.34.2, Unity 2022.3.62f2, Blueprinter 2.0.1.
+See References/FLIGHT-CHECKPOINT.md for dated results and pending checks.
 
-Verified so far:
+Verified: source provenance and GPL notices, 31 converted models, own catalog/map
+silhouette, tier 1 and $13m price, two 12680 N dry engines, 2817 kg empty mass.
+Builds 12/15/17 completed takeoff and a 100 m climb using native flight forces.
+Build 15 completed approach, touchdown and full stop with all 37 parts at 100%.
+Later rolling past the runway caused terrain impact; it was a separate fixture
+failure, not a damage-free completion of that later taxi check.
+Build 17 internal minigun consumed 77 rounds in three seconds, gear-up safety
+released normally, all airframe parts remained at 100%. Gear-down safety worked.
+Gear retract/extend and native camera switching were exercised. No assertion of
+controller orbit sensitivity or multiplayer compatibility is made.
 
-- Pinned original source ZIP and its per-file SHA-256 manifest are retained.
-- 31 source models convert and assemble in Unity 2022.3.62f2.
-- The experimental Blueprinter bundle compiles and loads in Nuclear Option
-  0.34.2. The aircraft has its own silhouette, rank 1 and $13 million purchase
-  price in the native hangar.
-- A fresh in-game aircraft was created in the local no-hostiles mission. The
-  source cabin and native HUD rendered, and all three wheel assemblies reported
-  ground contact. Both engines reported 12,680 N configured maximum dry thrust
-  and no afterburner. This first candidate is not a passing flight build.
+Aircraft uses original suspension/damage, explicit mass stations, source-derived
+fixed-wing force points and source gear/door animation. No immunity, ignored
+self-collisions, velocity clamp or artificial strengthening is used.
 
-Issues found and corrected in code, awaiting a fresh flight test:
-
-- The support plugin initially patched a nonexistent method. The target is now
-  the native Aircraft.SetComplexPhysics method.
-- Empty mass initially excluded 225 kg incorrectly; the target is now 2,817 kg.
-- OBJ import mirrors the intermediate X axis. XML offsets and animation
-  rotations must use the imported geometry's handedness.
-- Native JetNozzle.thrustTransform can refer to the nozzle AeroPart itself.
-  Moving that transform also moved its tail and elevator children. Dedicated
-  thrust-point children now prevent this hierarchy side effect.
-- Native hull adaptation is audited for penetration between unlinked parts.
-  No collision-ignore patch, invulnerability or artificial strengthening is used.
-
-Still required: a new spawn with the corrected support plugin, taxi/takeoff,
-gear cycles, camera switching, acceleration/deceleration, control response,
-weapons separation/firing, landing/braking and repeat health inspection.
-FAU markings, functional analog instruments and internal gun remain unfinished.
-
-Tests/A37TestProbe.cs supplies temporary control inputs and telemetry for the
-local test mission. Its placed-runway/approach fixtures must be identified as
-fixtures; subsequent flight uses native forces. Remove its DLL before release.
+Test fixture: Tests/A37TestProbe.cs temporarily supplies control inputs, logs native
+telemetry and places all rigidbodies on a measured pavement/initial approach.
+Only initial placement and approach speed are imposed; later forces/collisions
+are native. The test DLL must never ship or remain enabled for normal play.
+Performance results with the aerobrake incorrectly left open are invalid as
+maximum-speed measurements. Final performance, external weapons and final-build
+landing acceptance remain pending.

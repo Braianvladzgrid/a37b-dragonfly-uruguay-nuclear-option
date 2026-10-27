@@ -107,7 +107,7 @@ public sealed class A37TestProbe:BaseUnityPlugin {
   float desiredPitch=speed>65?-10:0;
   // Reducing throttle must not simultaneously command a 1200 m descent.
   if(cruise)desiredPitch=-Mathf.Clamp(4+(startY+cruiseHeight-target.GlobalPosition().y)*.04f,-4,12);
-  pitch=Mathf.Clamp(Mathf.DeltaAngle(target.transform.eulerAngles.x,desiredPitch)*.12f-angular.x*.3f,-.9f,.9f);
+  pitch=Mathf.Clamp(Mathf.DeltaAngle(target.transform.eulerAngles.x,desiredPitch)*(speed>160?.025f:.12f)-angular.x*.3f,-.9f,.9f);
   roll=Mathf.Clamp(Mathf.DeltaAngle(0,target.transform.eulerAngles.z)*.04f+angular.z*.2f,-.3f,.3f);
   yaw=Mathf.Clamp(Vector3.SignedAngle(Vector3.ProjectOnPlane(target.transform.forward,Vector3.up),heading,Vector3.up)/20,-.3f,.3f);
   throttle=fullPower?1:cruise?Mathf.Clamp(.6f+(180-speed)*.01f,.3f,.9f):1;brake=0;
@@ -120,5 +120,6 @@ public sealed class A37TestProbe:BaseUnityPlugin {
  [HarmonyPatch(typeof(Turbojet),"FixedUpdate"),HarmonyPrefix,HarmonyPriority(Priority.Last)]static void Engine(Aircraft ___aircraft,ControlInputs ___controlInputs){Inputs(___aircraft,___controlInputs);}
  [HarmonyPatch(typeof(LandingGear),"FixedUpdate"),HarmonyPrefix,HarmonyPriority(Priority.Last)]static void Gear(Aircraft ___aircraft,ControlInputs ___controlInputs){Inputs(___aircraft,___controlInputs);}
 }
+
 
 

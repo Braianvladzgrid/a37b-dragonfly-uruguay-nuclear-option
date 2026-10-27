@@ -47,3 +47,14 @@ Build 18 removes the internal gun pod donor capsule; native nose hull remains.
 Bundle SHA256 F31319256A8D94D939A7D883A25EA46EC1653F954F3131EC11290AE77BCBC80D.
 Final performance and external weapon tests remain pending. No playable release
 or NOMM submission yet. Start Mirage 2000 only after A37 acceptance is complete.
+
+## Update 01:33 Uruguay
+Build18: all three wheels contact after capsule removal; takeoff passed04:28:53Z.
+Airbrake.Update test-input synchronization verified openAmount0 under power.
+Gun fired78rounds (1500to1422), all37parts100. Three native camera states observed
+with health unchanged. Clean speed exceeded850km/h at~1720m: too fast for target.
+Repositioning from far away/high speed for landing broke joints immediately on
+fixture relocation04:31:25Z; this approach does NOT pass. Repeat near base before
+changing the aircraft. Earlier build15 landing pass remains separately recorded.
+Build19 native engine thrust falloff begins205m/s (previous260), engineering fit,
+not a hard speed clamp. Its performance still needs measurement.

@@ -31,3 +31,8 @@ Approach/takeoff speeds are provisional tuning inputs. A source comment mixes
 Flight testing must record loadout, fuel, altitude, measured speed and health.
 
 Minigun: 7.62 mm and 1500 rpm follow the FAU museum page. The FAU yearbook gives a different cyclic rate, so this is a documented source choice. 1500 rounds, 850 m/s, cartridge mass 24 g, 8.1 N s recoil and native damage parameters are provisional game integration inputs, not certified FAU weapon-manual data.
+
+Engine integration uses native Turbojet.maxSpeed=205m/s as the onset of thrust
+falloff, rather than a velocity clamp. This is an engineering fit to the FAU
+speed target, not a published J85 compressor/thrust curve. Build18's previous
+260m/s onset let clean speed exceed850km/h around1720m. Build19 is unmeasured.
